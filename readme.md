@@ -12,26 +12,19 @@
   </p>
 </p>
 
-
-
-<!-- TABLE OF CONTENTS -->
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-ville.Clean is a [![Qooxdoo]](https://qooxdoo.org/) theme inspired by [![Semantic UI]](https://semantic-ui.com/). This repo replaces [![sqv-qxthemes]](https://github.com/sqville/sqv-qxthemes) - sqv-qxthemes was an agressive approach to qooxdoo theming (no images, everything embedded in code), thus, making it too complex to use and maintain (too many Mixins). This project keeps the look and feel and removes the complexity making it easy to use and maintain and able to play well with other themes (theme switching). 
+**ville.Clean** is a [Qooxdoo](https://qooxdoo.org/) theme inspired by [Semantic UI](https://semantic-ui.com/). This repo replaces [sqv-qxthemes](https://github.com/sqville/sqv-qxthemes) - sqv-qxthemes was an agressive approach to qooxdoo theming (no images, everything embedded in code), thus, making it too complex to use and maintain (too many darn Mixins). This project keeps the look and feel and removes the complexity making it easy to use and maintain, and able to play well with other themes (theme switching). My need to embed has not completely gone away. That code has been moved to it's own repo called **[ville.Embed](https://github.com/sqville/ville.Embed)**
+
+**Additional Benefits**
+* Reduced reliance on external images for basic control graphics such as arrows, radio buttons and window buttons (all done with qooxdoo appearance and decoration entries)
+* Leveraged SVG files for decoration images where possible to improve image sharpness
+* Added control appearances for Buttons, TabViews and GroupBoxes (see Extra tab in the included widgetbrowser demo application)
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
 `github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
-
-
-### Built With
-
-* []()
-* []()
-* []()
-
 
 
 <!-- GETTING STARTED -->
@@ -75,20 +68,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
 
 
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
 <!-- LICENSE -->
 ## License
 
@@ -99,34 +78,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/github_username
+Chris Eskew - [@SQville](https://twitter.com/SQville) - email: chris.eskew@sqville.com
