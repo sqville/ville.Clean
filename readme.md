@@ -22,45 +22,28 @@
 * Leveraged SVG files for decoration images where possible to improve image sharpness
 * Added control appearances for Buttons, TabViews and GroupBoxes (see Extra tab in the included widgetbrowser demo application)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
+**Form Controls**
+<img src="ville_Clean_From.PNG" alt="Screen shot example">
 
 
 <!-- GETTING STARTED -->
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
+## Using the Theme in your Application
+To use the Theme in your application, go into the application root directory and install the theme into your project:
+```sh
+$ qx contrib update
+$ qx contrib list
+$ qx contrib install sqville/ville.Clean
+```
+now you just have to modify your compile.json to enable the theme:
+```sh
+"applications": [
+  {
+    ...
+    "theme": "ville.theme.Clean",
+    ...
+  }
+],
+```
 
 <!-- ROADMAP -->
 ## Roadmap
