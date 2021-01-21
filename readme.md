@@ -25,7 +25,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/sqville/ville.Clean">
-    <img src="images/ville_Clean.png" alt="Logo" width="277" height="138">
+    <img src="ville_Clean.png" alt="Logo" width="277" height="138">
   </a>
 
   <h3 align="center"></h3>
