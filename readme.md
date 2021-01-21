@@ -23,7 +23,7 @@
 * Added control appearances for Buttons, TabViews and GroupBoxes (see Extra tab in the included widgetbrowser demo application)
 
 **Form Controls**
-<img src="ville_Clean_From.PNG" alt="Screen shot example">
+<img src="ville_Clean_Form.PNG" alt="Screen shot example">
 
 
 <!-- GETTING STARTED -->
