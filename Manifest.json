@@ -8,11 +8,11 @@
     "license": "MIT",
     "authors": [
       {
-        "name" : "Chris Eskew",
-        "email" : "chris.eskew@sqville.com"
+        "name": "Chris Eskew",
+        "email": "chris.eskew@sqville.com"
       }
     ],
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "provides": {
     "namespace": "ville.theme.Clean",
@@ -42,9 +42,9 @@
         "widgetbrowser.pages.Misc",
         "widgetbrowser.pages.Extras"
       ],
-	  "exclude": [
-		"qx.theme.Modern"
-	  ]
+      "exclude": [
+        "qx.theme.Modern"
+      ]
     }
   },
   "requires": {
