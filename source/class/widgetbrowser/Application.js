@@ -14,8 +14,6 @@
    Authors:
      * Tristan Koch (tristankoch)
 
-  Edited by Chris Eskew (sqville) for the ville.Clean theme
-
 ************************************************************************ */
 
 /*
