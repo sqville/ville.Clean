@@ -45,6 +45,10 @@ now you just have to modify your compile.json to enable the theme:
 ],
 ```
 
+<!-- DEMOS -->
+## Demo
+Using Qooxdoos [WidgetBrowser](http://qooxdoo.org/qxl.packagebrowser/qxl.packagebrowser/demos/sqville/ville.Clean/widgetbrowser/)
+
 <!-- ROADMAP -->
 ## Roadmap
 
