@@ -30,9 +30,9 @@
 ## Using the Theme in your Application
 To use the Theme in your application, go into the application root directory and install the theme into your project:
 ```sh
-$ qx pkg update
-$ qx pkg list
-$ qx pkg install sqville/ville.Clean
+$ qx package update
+$ qx package list
+$ qx package install sqville/ville.Clean
 ```
 now you just have to modify your compile.json to enable the theme:
 ```sh
