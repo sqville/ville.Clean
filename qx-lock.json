@@ -2,19 +2,19 @@
   "libraries": [
     {
       "library_name": "formdemo",
-      "library_version": "1.0.1",
-      "path": "qx_packages/qooxdoo_qxl_formdemo_v1_0_1",
+      "library_version": "1.0.2",
+      "path": "qx_packages/qooxdoo_qxl_formdemo_v1_0_2",
       "uri": "qooxdoo/qxl.formdemo",
       "repo_name": "qooxdoo/qxl.formdemo",
-      "repo_tag": "v1.0.1"
+      "repo_tag": "v1.0.2"
     },
     {
       "library_name": "versionlabel",
-      "library_version": "1.0.1",
-      "path": "qx_packages/qooxdoo_qxl_versionlabel_v1_0_1",
+      "library_version": "1.0.5",
+      "path": "qx_packages/qooxdoo_qxl_versionlabel_v1_0_5",
       "uri": "qooxdoo/qxl.versionlabel",
       "repo_name": "qooxdoo/qxl.versionlabel",
-      "repo_tag": "v1.0.1"
+      "repo_tag": "v1.0.5"
     }
   ],
   "version": "2.1.0"
