@@ -3669,6 +3669,22 @@ qx.Theme.define("ville.theme.clean.Appearance",
           backgroundColor: "light-background"
         };
       }
-    }
+    },
+
+    /*
+      --------------------
+      VIRTUAL SELECTBOX 
+      --------------------
+    */
+      
+      "list-search-highlight" : {
+        style : function(states) {
+          return {
+            backgroundColor: 'rgba(255, 251, 0, 0.53)',
+            textDecorationStyle: 'dotted',
+            textDecorationLine: 'underline'
+          };
+        }
+      }
   }
 });
