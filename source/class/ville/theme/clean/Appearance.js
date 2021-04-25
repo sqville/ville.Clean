@@ -1976,23 +1976,23 @@ qx.Theme.define("ville.theme.clean.Appearance",
     "primary-button-frame" :
     {
 	    include :"button-frame",
+
       style : function(states)
       {
-        var decorator = "primary-button-box";
+        var bgcolor = "primary";
 
         if (!states.disabled) {
           if (states.hovered && !states.pressed && !states.checked) {
-            decorator = "primary-button-box-hovered";
+            bgcolor = "primary-button-box-hovered";
           } else if (states.hovered && (states.pressed || states.checked)) {
-            decorator = "primary-button-box-pressed";
+            bgcolor = "primary-button-box-pressed";
           } else if (states.pressed || states.checked) {
-            decorator = "primary-button-box-pressed";
+            bgcolor = "primary-button-box-pressed";
           }
         }
 
         return {
-          decorator : decorator,
-          textColor : "primary-button-text"
+          backgroundColor : bgcolor
         };
       }
     },
@@ -2006,7 +2006,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
       {
         return {
           center : true,
-          padding : [10, 18]
+          padding : [10, 18],
+          textColor : "primary-button-text"
         };
       }
     },
@@ -2020,24 +2021,24 @@ qx.Theme.define("ville.theme.clean.Appearance",
    
     "secondary-button-frame" :
     {
-	  include :"button-frame",
+      include :"button-frame",
+
       style : function(states)
       {
-        var decorator = "secondary-button-box";
+        var bgcolor = "secondary-button-box";
 
         if (!states.disabled) {
           if (states.hovered && !states.pressed && !states.checked) {
-            decorator = "secondary-button-box-hovered";
+            bgcolor = "secondary-button-box-hovered";
           } else if (states.hovered && (states.pressed || states.checked)) {
-            decorator = "secondary-button-box-pressed";
+            bgcolor = "secondary-button-box-pressed";
           } else if (states.pressed || states.checked) {
-            decorator = "secondary-button-box-pressed";
+            bgcolor = "secondary-button-box-pressed";
           }
         }
 
         return {
-          decorator : decorator,
-          textColor : "secondary-button-text"
+          backgroundColor : bgcolor
         };
       }
     },
@@ -2051,7 +2052,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
       {
         return {
           center : true,
-          padding : [10, 18]
+          padding : [10, 18],
+          textColor : "secondary-button-text"
         };
       }
     },
@@ -2065,24 +2067,24 @@ qx.Theme.define("ville.theme.clean.Appearance",
    
     "tertiary-button-frame" :
     {
-	  include :"button-frame",
+      include :"button-frame",
+
       style : function(states)
       {
-        var decorator = "tertiary-button-box";
+        var bgcolor = "tertiary-button-box";
 
         if (!states.disabled) {
           if (states.hovered && !states.pressed && !states.checked) {
-            decorator = "tertiary-button-box-hovered";
+            bgcolor = "tertiary-button-box-hovered";
           } else if (states.hovered && (states.pressed || states.checked)) {
-            decorator = "tertiary-button-box-pressed";
+            bgcolor = "tertiary-button-box-pressed";
           } else if (states.pressed || states.checked) {
-            decorator = "tertiary-button-box-pressed";
+            bgcolor = "tertiary-button-box-pressed";
           }
         }
 
         return {
-          decorator : decorator,
-          textColor : "tertiary-button-text"
+          backgroundColor : bgcolor
         };
       }
     },
@@ -2096,7 +2098,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
       {
         return {
           center : true,
-          padding : [10, 18]
+          padding : [10, 18],
+          textColor : "tertiary-button-text"
         };
       }
     },
