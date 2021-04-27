@@ -57,7 +57,8 @@ qx.Class.define("widgetbrowser.view.Header",
         var item = new qx.ui.form.ListItem(theme.name);
         item.setUserData("value", theme.name);
         select.add(item);
-        if (! currentThemeItem  && hashTheme && theme.name.match(hashTheme)){
+        //if (! currentThemeItem  && hashTheme && theme.name.match(hashTheme)){
+        if (! currentThemeItem  && theme.name =="ville.theme.Clean"){
           currentThemeItem = item;
         }
       }
