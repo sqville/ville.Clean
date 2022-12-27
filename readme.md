@@ -15,7 +15,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-**ville.Clean** is a [Qooxdoo](https://qooxdoo.org/) theme inspired by [Semantic UI](https://semantic-ui.com/). This repo replaces [sqv-qxthemes](https://github.com/sqville/sqv-qxthemes) - sqv-qxthemes was an agressive approach to qooxdoo theming (no images, everything embedded in code), thus, making it too complex to use and maintain (too many darn Mixins). This project keeps the look and feel and removes the complexity making it easy to use and maintain, and able to play well with other themes (theme switching). My need to embed has not completely gone away. That code has been moved to it's own repo called **[ville.Embed](https://github.com/sqville/ville.Embed)**
+**ville.Clean** is a [Qooxdoo](https://qooxdoo.org/) theme inspired by [Semantic UI](https://semantic-ui.com/).
 
 **Additional Benefits**
 * Reduced reliance on external images for basic control graphics such as arrows, radio buttons and window buttons (all done with qooxdoo appearance and decoration entries)
@@ -65,4 +65,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Chris Eskew - [@SQville](https://twitter.com/SQville) - email: chris.eskew@sqville.com
+Chris Eskew - [@SQville](https://twitter.com/SQville) - email: sqville@gmail.com

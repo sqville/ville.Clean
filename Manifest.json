@@ -1,5 +1,5 @@
 {
-  "$schema": "https://qooxdoo.org/schema/Manifest-1-0-0.json",
+  "$schema": "https://qooxdoo.org/schema/Manifest-2-0-0.json",
   "info": {
     "name": "ville.Clean",
     "summary": "a theme for qooxdoo desktop applications inspired by Semantic UI",
@@ -9,7 +9,7 @@
     "authors": [
       {
         "name": "Chris Eskew",
-        "email": "chris.eskew@sqville.com"
+        "email": "sqville@gmail.com"
       }
     ],
     "version": "1.0.3"
@@ -48,8 +48,7 @@
     }
   },
   "requires": {
-    "@qooxdoo/compiler": "^1.0.0",
-    "@qooxdoo/framework": "^6.0.0",
+    "@qooxdoo/framework": "^7.4.2",
     "qooxdoo/qxl.formdemo": "^1.0.2",
     "qooxdoo/qxl.versionlabel": "^1.0.3"
   }
