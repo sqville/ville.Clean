@@ -25,11 +25,9 @@
  * Demonstrates qx.ui.embed(...):
  *
  * embed.Canvas
- * embed.Flash
  * embed.Html
  *
  *
- * @asset(qxl/widgetbrowser/fo_tester.swf)
  * @asset(qxl/widgetbrowser/blank.html)
  */
 
@@ -60,7 +58,7 @@ qx.Class.define("widgetbrowser.pages.Embed",
       var label;
 
       // Flash
-      label = new qx.ui.basic.Label("Flash");
+      /*label = new qx.ui.basic.Label("Flash");
       this.__grid.add(label, {row: 0, column: 0});
       var flashVars = {
         flashVarText: "this is passed in via FlashVars"
@@ -74,6 +72,7 @@ qx.Class.define("widgetbrowser.pages.Embed",
       flash.getContentElement().setParam("bgcolor", "#FF6600");
       widgets.push(flash);
       this.__grid.add(flash, {row: 1, column: 0, colSpan: 2});
+      */
 
       // Canvas
       label = new qx.ui.basic.Label("Canvas");

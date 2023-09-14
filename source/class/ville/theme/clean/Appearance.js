@@ -1,6 +1,6 @@
 /* ************************************************************************
 
-   Ville Software (SQville)
+   SQville
 
    Copyright:
      None
@@ -9,7 +9,7 @@
      MIT
 
    Authors:
-     * Chris Eskew (chris.eskew@sqville.com)
+     * Chris Eskew (sqville@gmail.com)
 
 ************************************************************************ */
 
@@ -1027,11 +1027,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
           }
         }
 
-        if (states.invalid && !states.disabled) {
+        if (states.invalid && !states.disabled)
           decorator += "-invalid";
-        } else if (states.focused) {
-          decorator += "-focused";
-        }
 
         return {
           decorator : decorator,

@@ -1,8 +1,6 @@
 /* ************************************************************************
 
-   SQville Software
-
-   http://sqville.com
+   SQville
 
    Copyright:
      None
@@ -11,7 +9,7 @@
      MIT
 
    Authors:
-     * Chris Eskew (chris.eskew@sqville.com)
+     * Chris Eskew (sqville@gmail.com)
 
 ************************************************************************ */
 
