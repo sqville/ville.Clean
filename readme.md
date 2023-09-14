@@ -1,19 +1,5 @@
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="https://github.com/sqville/ville.Clean">
-    <img src="ville_Clean.png" alt="Logo" width="277" height="138">
-  </a>
-
-  <h3 align="center"></h3>
-
-  <p align="center">
-    A theme for the Qooxdoo JavaScript Framework
-  </p>
-</p>
-
 <!-- ABOUT THE PROJECT -->
-## About The Project
+# Ville.Clean
 
 **ville.Clean** is a [Qooxdoo](https://qooxdoo.org/) theme inspired by [Semantic UI](https://semantic-ui.com/).
 
@@ -47,12 +33,7 @@ now you just have to modify your compile.json to enable the theme:
 
 <!-- DEMOS -->
 ## Demo
-Using Qooxdoos [WidgetBrowser](http://qooxdoo.org/qxl.packagebrowser/qxl.packagebrowser/demos/sqville/ville.Clean/widgetbrowser/)
-
-<!-- ROADMAP -->
-## Roadmap
-
-TBD
+Using Qooxdoos [WidgetBrowser](https://sqville.github.io/ville.Clean/published/)
 
 
 <!-- LICENSE -->
@@ -65,4 +46,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Chris Eskew - [@SQville](https://twitter.com/SQville) - email: sqville@gmail.com
+Chris Eskew - email: sqville@gmail.com
