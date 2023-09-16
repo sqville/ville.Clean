@@ -107,12 +107,6 @@ qx.Class.define("widgetbrowser.view.TabView",
       var misc = new widgetbrowser.view.TabPage("Misc", classname, controls);
       this.add(misc);
 
-      // Extras for Clean theme
-      classname = "widgetbrowser.pages.Extras";
-      controls = {disabled: true};
-      var extras = new widgetbrowser.view.TabPage("Extras", classname, controls);
-      this.add(extras);
-
     },
 
     __rememberCurrentTab: function(e) {

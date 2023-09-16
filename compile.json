@@ -26,8 +26,7 @@
             "widgetbrowser.pages.Embed",
             "widgetbrowser.pages.EmbedFrame",
             "widgetbrowser.pages.Basic",
-            "widgetbrowser.pages.Misc",
-            "widgetbrowser.pages.Extras"
+            "widgetbrowser.pages.Misc"
          ],
          "exclude": [
             "qx.theme.Modern"

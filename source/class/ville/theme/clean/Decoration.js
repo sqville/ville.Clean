@@ -309,8 +309,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
       {
         radius : 3,
         width : 0,
-        color : "button-border",
-        backgroundColor : "button-box-bright"
+        color : "button-border"
       }
     },
 

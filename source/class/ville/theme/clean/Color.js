@@ -70,20 +70,21 @@ qx.Theme.define("ville.theme.clean.Color",
     "scrollbar-dark" : "#EBEBEB",
 
     // form
-    "button" : "rgba(0, 0, 0, 0.6)",
+    "button" : "rgba(0, 0, 0, 0.7)",
     "button-border" : "#BBB",
     "button-border-hovered" : "#939393",
     "invalid" : "#FF0000",
 
-    "button-box-bright" : "#e0e0e0",
-    "button-box-bright-hovered" : "#e8e8e8",
+    "button-box-bright" : "#e0e1e2",
+    "button-box-bright-hovered" : "#cacbcd",
     "button-box-dark" : "#E3E3E3",
-    "button-box-bright-pressed" : "#cccccc",
+    "button-box-bright-pressed" : "#babbbc",
     "button-box-dark-pressed" : "#F5F5F5",
     "border-lead" : "#888888",
-    "button-text" : "rgba(0, 0, 0, 0.6)",
+    "button-text" : "rgba(0, 0, 0, 0.7)",
     "button-text-hovered" : "rgba(0, 0, 0, 0.8)",
-    "button-focus-shadow" : qx.core.Environment.get("css.rgba") ? "rgba(81, 167, 232, 0.8)" : "#51A7E8",   //SQv New
+    "button-text-pressed" : "rgba(0, 0, 0, 0.9)",
+    "button-focus-shadow" : "rgba(81, 167, 232, 0.8)",
     
     //SQ New
     "textfield-selected" : qx.core.Environment.get("css.rgba") ? "rgba(133, 183, 217, 1)" : "#85b7d9",
@@ -147,7 +148,7 @@ qx.Theme.define("ville.theme.clean.Color",
 
     // text
     "text-combobox-listitem" : "rgba(0, 0, 0, 0.6)", //NOT USED
-    "text" : "rgba(0, 0, 0, 0.87)",
+    "text" : "rgba(0, 0, 0, 0.8)",
     "text-darker" : "rgba(0, 0, 0, 0.9)",
     "text-disabled" : "rgba(0, 0, 0, 0.4)",
     "text-selected" : "#000000",

@@ -39,12 +39,25 @@
         "widgetbrowser.pages.Embed",
         "widgetbrowser.pages.EmbedFrame",
         "widgetbrowser.pages.Basic",
-        "widgetbrowser.pages.Misc",
-        "widgetbrowser.pages.Extras"
+        "widgetbrowser.pages.Misc"
       ],
       "exclude": [
         "qx.theme.Modern"
       ]
+    },
+    "fonts": {
+      "Lato": {
+        "fontFaces": [
+          {
+            "fontFamily": "Lato",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "paths": [
+              "ville/theme/clean/font/Lato/Lato-Regular.ttf"
+            ]
+          }
+        ]
+      }
     }
   },
   "requires": {

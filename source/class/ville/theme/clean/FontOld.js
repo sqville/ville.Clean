@@ -14,11 +14,11 @@
 ************************************************************************ */
 
 /**
- * The ville Clean font theme.
- *
- * @usefont(Lato)
+ * The ville.Clean font theme.
+ * @asset(ville/theme/clean/font/Lato/*.ttf)
+ * 
  */
-qx.Theme.define("ville.theme.clean.Font",
+qx.Theme.define("ville.theme.clean.FontOld",
 {
   fonts :
   {
@@ -26,8 +26,8 @@ qx.Theme.define("ville.theme.clean.Font",
     {
       family : ["sans-serif"],
       color : "text",
+      //weight : "400",
       size : 14,
-      weight : "400",
       fontName : "Lato"
     },
 
@@ -35,12 +35,6 @@ qx.Theme.define("ville.theme.clean.Font",
     {
       include : "default",
       weight : "700"
-    },
-
-    button : 
-    {
-      include : "bold",
-      size : 14
     },
 
     datechooser :
@@ -53,6 +47,12 @@ qx.Theme.define("ville.theme.clean.Font",
     {
       include : "bold",
       size : 13
+    },
+
+    button : 
+    {
+      include : "bold",
+      size : 14
     },
 
     "groupbox-legend" :

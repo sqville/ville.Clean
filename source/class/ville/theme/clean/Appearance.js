@@ -1877,39 +1877,45 @@ qx.Theme.define("ville.theme.clean.Appearance",
       {
         var decorator = "button-box";
         var textcolor = "button-text";
+        var bgcolor = "button-box-bright";
 
         if (!states.disabled) {
           if (states.hovered && !states.pressed && !states.checked) {
-            decorator = "button-box-hovered";
+            //decorator = "button-box-hovered";
             textcolor = "button-text-hovered";
+            bgcolor = "button-box-bright-hovered";
           } else if (states.hovered && (states.pressed || states.checked)) {
-            decorator = "button-box-pressed-hovered";
-            textcolor = "button-text-hovered";
+            //decorator = "button-box-pressed-hovered";
+            textcolor = "button-text-pressed";
+            bgcolor = "button-box-bright-pressed";
           } else if (states.pressed || states.checked) {
-            decorator = "button-box-pressed";
+            //decorator = "button-box-pressed";
+            textcolor = "button-text-pressed";
+            bgcolor = "button-box-bright-pressed";
           }
         }
 
-        if (states.invalid && !states.disabled) {
+        /*if (states.invalid && !states.disabled) {
           decorator += "-invalid";
-        } /*else if (states.focused) {
+        } else if (states.focused) {
           decorator += "-focused";
         }*/
 
         return {
           decorator : decorator,
-          padding : [3, 8],
+          padding : [1, 8],
           cursor: states.disabled ? undefined : "pointer",
           minWidth: 5,
           minHeight: 5,
           textColor : textcolor,
+          backgroundColor : bgcolor,
           font : "button"
         };
       }
     },
     
     
-    "button-frame/label" : {
+    /*"button-frame/label" : {
       alias : "atom/label",
 
       style : function(states)
@@ -1918,7 +1924,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
           textColor : states.disabled ? "text-disabled" :  "button-text"
         };
       }
-    },
+    },*/
 
     "button" :
     {
