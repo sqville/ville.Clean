@@ -17,20 +17,9 @@
  * Clean color theme, based off of Simple color theme (qooxdoo) and Semantic default
  */
 qx.Theme.define("ville.theme.clean.Color",
-{
-  aliases : {
-    primarycolor : "#3b83c0"
-  },
-  
+{  
   colors :
-  {
-    //************************
-    //*** Color Pallette 1 ***
-    //************************
-    "primary" : [33, 133, 208], //#2185D0
-    "secondary" : "#1b1c1d",
-    "tertiary" : "#5bbd72",
-    
+  {    
     // main
     "background" : "#ffffff",
     "light-background" : "#E0ECFF",
@@ -70,7 +59,7 @@ qx.Theme.define("ville.theme.clean.Color",
     "scrollbar-dark" : "#EBEBEB",
 
     // form
-    "button" : "rgba(0, 0, 0, 0.7)",
+    "button" : "rgba(0, 0, 0, 0.6)",
     "button-border" : "#BBB",
     "button-border-hovered" : "#939393",
     "invalid" : "#FF0000",
@@ -81,14 +70,14 @@ qx.Theme.define("ville.theme.clean.Color",
     "button-box-bright-pressed" : "#babbbc",
     "button-box-dark-pressed" : "#F5F5F5",
     "border-lead" : "#888888",
-    "button-text" : "rgba(0, 0, 0, 0.7)",
+    "button-text" : "rgba(0, 0, 0, 0.6)",
     "button-text-hovered" : "rgba(0, 0, 0, 0.8)",
     "button-text-pressed" : "rgba(0, 0, 0, 0.9)",
     "button-focus-shadow" : "rgba(81, 167, 232, 0.8)",
     
     //SQ New
-    "textfield-selected" : qx.core.Environment.get("css.rgba") ? "rgba(133, 183, 217, 1)" : "#85b7d9",
-	  "textfield-selected-darker" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 0.5)" : "#BDBEBE",
+    "textfield-selected" : "rgba(133, 183, 217, 1)",
+	  "textfield-selected-darker" : "rgba(0, 0, 0, 0.5)",
 	
     //SQ New
     "progressbar-base" : qx.core.Environment.get("css.rgba") ? "rgba(229, 229, 229, 1)" : "#E5E5E5",
@@ -96,27 +85,7 @@ qx.Theme.define("ville.theme.clean.Color",
     "progressbar-complete" : qx.core.Environment.get("css.rgba") ? "rgba(33, 186, 69, 1)" : "#21BA45",
     "progressbar-warning" : qx.core.Environment.get("css.rgba") ? "rgba(242, 192, 55, 1)" : "#F2C037",
     "progressbar-error" : qx.core.Environment.get("css.rgba") ? "rgba(219, 40, 40, 1)" : "#DB2828",	
-	
-    //*** Primary Button colors
-    "primary-button-box" : "#3b83c0",
-    "primary-button-box-hovered" : "#458ac6",
-    "primary-button-box-pressed" : "#3576ac",
-    "primary-button-text" : "#ffffff",
-    
-    //*** Secondary Button colors
-    "secondary-button-box" : "#1b1c1d",
-    "secondary-button-box-hovered" : "#222425",
-    "secondary-button-box-pressed" : "#0a0a0b",
-    "secondary-button-inset-shadow" : "rgba(39, 41, 43, 0.15)",
-    "secondary-button-text" : "primary-button-text",
-    
-    //*** Tertiary Button colors
-    "tertiary-button-box" : "#5bbd72",
-    "tertiary-button-box-hovered" : "#66C17B",
-    "tertiary-button-box-pressed" : "#46AE5F",
-    "tertiary-button-inset-shadow" : "rgba(39, 41, 43, 0.15)",
-    "tertiary-button-text" : "primary-button-text",
-    
+	    
     "ville-black" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 1)" : "#000000",
     "ville-arrow-gray" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 0.6)" : "#444444",
     "ville-arrow-med-gray" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 0.4)" : "#444444",

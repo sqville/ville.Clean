@@ -46,14 +46,58 @@
       ]
     },
     "fonts": {
-      "Lato": {
+      "LatoWeb": {
         "fontFaces": [
           {
-            "fontFamily": "Lato",
+            "fontFamily": "LatoWeb",
             "fontStyle": "normal",
             "fontWeight": "normal",
             "paths": [
-              "ville/theme/clean/font/Lato/Lato-Regular.ttf"
+              "ville/theme/clean/font/Lato/Lato-Regular.ttf",
+              "ville/theme/clean/font/Lato/Lato-Regular.woff2",
+              "ville/theme/clean/font/Lato/Lato-Regular.woff"
+            ]
+          }
+        ]
+      },
+      "LatoWebSemibold": {
+        "fontFaces": [
+          {
+            "fontFamily": "LatoWebSemibold",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "paths": [
+              "ville/theme/clean/font/Lato/Lato-Semibold.ttf",
+              "ville/theme/clean/font/Lato/Lato-Semibold.woff2",
+              "ville/theme/clean/font/Lato/Lato-Semibold.woff"
+            ]
+          }
+        ]
+      },
+      "LatoWebBlack": {
+        "fontFaces": [
+          {
+            "fontFamily": "LatoWebBlack",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "paths": [
+              "ville/theme/clean/font/Lato/Lato-Black.ttf",
+              "ville/theme/clean/font/Lato/Lato-Black.woff2",
+              "ville/theme/clean/font/Lato/Lato-Black.woff"
+            ]
+          }
+        ]
+      },
+      "LatoWebBold": {
+        "fontFaces": [
+          {
+            "fontFamily": "LatoWebBold",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "paths": [
+              "ville/theme/clean/font/Lato/Lato-Bold.ttf",
+              "ville/theme/clean/font/Lato/Lato-Bold.woff2",
+              "ville/theme/clean/font/Lato/Lato-Bold.woff"
             ]
           }
         ]
@@ -61,8 +105,8 @@
     }
   },
   "requires": {
-    "@qooxdoo/framework": "^7.4.2",
-    "qooxdoo/qxl.formdemo": "^1.0.2",
-    "qooxdoo/qxl.versionlabel": "^1.0.3"
+    "@qooxdoo/framework": "^7.6.1",
+    "qooxdoo/qxl.formdemo": "^2.0.0",
+    "qooxdoo/qxl.versionlabel": "^2.0.0"
   }
 }

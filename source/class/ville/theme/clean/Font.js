@@ -16,7 +16,10 @@
 /**
  * The ville Clean font theme.
  *
- * @usefont(Lato)
+ * @usefont(LatoWeb)
+ * @usefont(LatoWebBold)
+ * @usefont(LatoWebBlack)
+ * @usefont(LatoWebSemibold)
  */
 qx.Theme.define("ville.theme.clean.Font",
 {
@@ -28,13 +31,16 @@ qx.Theme.define("ville.theme.clean.Font",
       color : "text",
       size : 14,
       weight : "400",
-      fontName : "Lato"
+      fontName : "LatoWeb"
     },
 
     bold :
     {
-      include : "default",
-      weight : "700"
+      family : ["sans-serif"],
+      color : "text",
+      size : 14,
+      weight : "700",
+      fontName : "LatoWebBold"
     },
 
     button : 

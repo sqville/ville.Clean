@@ -717,7 +717,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
           arrowColumnWidth : 8,
           padding : 0,
           placementModeY : states.submenu || states.contextmenu ? "best-fit" : "keep-align",
-          offset : [8,0,0,0]
+          offset : [0,0,0,0]
         };
 
         if (states.submenu)
@@ -1971,144 +1971,6 @@ qx.Theme.define("ville.theme.clean.Appearance",
     "menubutton/icon" : "combobox/button/icon",
     
     /*
-    ---------------------------------------------------------------------------     
-      PRIMARY BUTTON
-    ---------------------------------------------------------------------------
-    */
-   
-    "primary-button-frame" :
-    {
-	    include :"button-frame",
-
-      style : function(states)
-      {
-        var bgcolor = "primary";
-
-        if (!states.disabled) {
-          if (states.hovered && !states.pressed && !states.checked) {
-            bgcolor = "primary-button-box-hovered";
-          } else if (states.hovered && (states.pressed || states.checked)) {
-            bgcolor = "primary-button-box-pressed";
-          } else if (states.pressed || states.checked) {
-            bgcolor = "primary-button-box-pressed";
-          }
-        }
-
-        return {
-          backgroundColor : bgcolor
-        };
-      }
-    },
-    
-    "primary-button" :
-    {
-      alias : "primary-button-frame",
-      include : "primary-button-frame",
-
-      style : function(states)
-      {
-        return {
-          center : true,
-          padding : [10, 18],
-          textColor : "primary-button-text"
-        };
-      }
-    },
-
-    
-    /*
-    ---------------------------------------------------------------------------
-      SECONDARY BUTTON
-    ---------------------------------------------------------------------------
-    */
-   
-    "secondary-button-frame" :
-    {
-      include :"button-frame",
-
-      style : function(states)
-      {
-        var bgcolor = "secondary-button-box";
-
-        if (!states.disabled) {
-          if (states.hovered && !states.pressed && !states.checked) {
-            bgcolor = "secondary-button-box-hovered";
-          } else if (states.hovered && (states.pressed || states.checked)) {
-            bgcolor = "secondary-button-box-pressed";
-          } else if (states.pressed || states.checked) {
-            bgcolor = "secondary-button-box-pressed";
-          }
-        }
-
-        return {
-          backgroundColor : bgcolor
-        };
-      }
-    },
-    
-    "secondary-button" :
-    {
-      alias : "secondary-button-frame",
-      include : "secondary-button-frame",
-
-      style : function(states)
-      {
-        return {
-          center : true,
-          padding : [10, 18],
-          textColor : "secondary-button-text"
-        };
-      }
-    },
-    
-    
-    /*
-    ---------------------------------------------------------------------------
-      TERTIARY BUTTON
-    ---------------------------------------------------------------------------
-    */
-   
-    "tertiary-button-frame" :
-    {
-      include :"button-frame",
-
-      style : function(states)
-      {
-        var bgcolor = "tertiary-button-box";
-
-        if (!states.disabled) {
-          if (states.hovered && !states.pressed && !states.checked) {
-            bgcolor = "tertiary-button-box-hovered";
-          } else if (states.hovered && (states.pressed || states.checked)) {
-            bgcolor = "tertiary-button-box-pressed";
-          } else if (states.pressed || states.checked) {
-            bgcolor = "tertiary-button-box-pressed";
-          }
-        }
-
-        return {
-          backgroundColor : bgcolor
-        };
-      }
-    },
-    
-    "tertiary-button" :
-    {
-      alias : "tertiary-button-frame",
-      include : "tertiary-button-frame",
-
-      style : function(states)
-      {
-        return {
-          center : true,
-          padding : [10, 18],
-          textColor : "tertiary-button-text"
-        };
-      }
-    },
-    
-
-    /*
     ---------------------------------------------------------------------------
       SPLIT BUTTON
     ---------------------------------------------------------------------------
@@ -2793,7 +2655,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
           font            : "datechooser-bold",
           textAlign       : "center",
           textColor       : states.disabled ? "text-disabled" : states.weekend ? "text" : "background",
-          backgroundColor : states.weekend ? "background" : "primary",
+          backgroundColor : states.weekend ? "background" : "background-selected-dark",
           paddingTop: 2
         };
       }
@@ -2808,7 +2670,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
           decorator       : states.today ? "main" : undefined,
           textColor       : states.disabled ? "text-disabled" : states.selected ? "white" : states.otherMonth ? "text-disabled" : undefined,
           font : "datechooser",
-          backgroundColor : states.disabled ? undefined : states.selected ? "primary" : undefined,
+          backgroundColor : states.disabled ? undefined : states.selected ? "background-selected-dark" : undefined,
           padding         : states.today ? [ 1, 3 ] : [2, 4]
         };
       }
