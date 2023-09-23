@@ -268,6 +268,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
           decorator : "table-header-column-button",
           padding : [14, 12],
           backgroundColor : "table-header",
+          cursor : states.hovered ? "pointer" : "default",
           icon : ""
         };
       }
@@ -282,7 +283,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
         return {
           width: 12,
           height : 14,
-          backgroundColor : states.hovered ? "black" : "gray",
+          backgroundColor : states.hovered ? "text" : "text-darker",
           decorator : states.hovered ? "select-column-order-hovered-vert" : "select-column-order-vert"
         };
       }
@@ -1884,14 +1885,18 @@ qx.Theme.define("ville.theme.clean.Appearance",
             //decorator = "button-box-hovered";
             textcolor = "button-text-hovered";
             bgcolor = "button-box-bright-hovered";
-          } else if (states.hovered && (states.pressed || states.checked)) {
+          } else if (states.hovered && (states.pressed)) {
             //decorator = "button-box-pressed-hovered";
             textcolor = "button-text-pressed";
             bgcolor = "button-box-bright-pressed";
-          } else if (states.pressed || states.checked) {
+          } else if (states.hovered && (states.checked)) {
+            //decorator = "button-box-pressed-hovered";
+            textcolor = "button-text-hovered";
+            bgcolor = "button-box-bright-hovered";
+          } else if (states.checked) {
             //decorator = "button-box-pressed";
             textcolor = "button-text-pressed";
-            bgcolor = "button-box-bright-pressed";
+            bgcolor = "button-box-bright-checked";
           }
         }
 
@@ -2014,7 +2019,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
     },
 
     "splitbutton/arrow" : {
-
+      
       style : function(states)
       {
         var decorator = "button-box";
@@ -2244,8 +2249,10 @@ qx.Theme.define("ville.theme.clean.Appearance",
         }
         return {
           padding : [3, 8, 3, 5],
-          icon : states.opened ? ville.theme.clean.Image.URLS["tree-folder-open"] : ville.theme.clean.Image.URLS["tree-folder"],
-          iconOpened : ville.theme.clean.Image.URLS["tree-folder-open"],
+          //icon : states.opened ? ville.theme.clean.Image.URLS["tree-folder-open"] : ville.theme.clean.Image.URLS["tree-folder"],
+          icon : "",
+          //iconOpened : ville.theme.clean.Image.URLS["tree-folder-open"],
+          iconOpened : "",
           backgroundColor : backgroundColor,
           opacity : states.drag ? 0.5 : undefined
         };
@@ -2257,10 +2264,24 @@ qx.Theme.define("ville.theme.clean.Appearance",
       include : "image",
       style : function(states)
       {
+        var decorator = "ville-icon-tree-folder";
+        var sheet = qx.ui.style.Stylesheet.getInstance();
+        var prefix = qx.theme.manager.Decoration.CSS_CLASSNAME_PREFIX;
+        var prefixdecbase = "." + prefix + decorator; 
+        //sheet.addRule(":root", "--compoundbrandbackground:" + qx.theme.manager.Color.getInstance().resolve("CompoundBrandBackground"));
+        if (!sheet.hasRule(prefixdecbase))
+        {
+          var rule1 = prefixdecbase;
+          var css1 = "clip-path: polygon(0 23%, 0 7%, 4% 0, 29% 0, 32% 7%, 60% 7%, 98% 7%, 100% 10%, 100% 100%, 15% 100%, 0 100%, 0% 85%);";
+          sheet.addRule(rule1, css1);
+        }
+        
         return {
           marginLeft: 6,
-          width : 18,
-          height : 18
+          width : 15,
+          height : 11,
+          backgroundColor : states.opened ? "transparent" : "text",
+          decorator : "ville-icon-tree-folder"
         };
       }
     },
@@ -2284,7 +2305,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
       style : function(states)
       {
         return {
-          icon : ville.theme.clean.Image.URLS["tree-file"],
+          //icon : ville.theme.clean.Image.URLS["tree-file"],
+          icon : "",
           opacity : states.drag ? 0.5 : undefined
         };
       }
@@ -2297,9 +2319,12 @@ qx.Theme.define("ville.theme.clean.Appearance",
       {
         return {
           //padding : [0, 4, 0, 0],
-          width : 18,
-          height : 18,
-          scale : true
+          //width : 18,
+          width : 11,
+          height : 15,
+          backgroundColor : "text",
+          decorator : "ville-icon-tree-file"
+          //scale : true
         };
       }
     },
@@ -3088,8 +3113,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
         return {
           zIndex : states.checked ? 10 : 5,
           decorator : decorator,
-          textColor : states.disabled ? "text-disabled" : states.checked ? null : "button-text",
-          font : states.checked ? "bold" : "bold",
+          textColor : states.disabled ? "text-disabled" : states.checked ? "button-text" : "button-text",
+          font : states.checked ? "bold" : "default",
           padding : padding,
           cursor: "pointer",
           marginBottom : states.barBottom ? 1 : undefined,

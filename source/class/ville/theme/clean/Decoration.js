@@ -122,7 +122,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
    {
    	  style :
       {
-        color : [null,"transparent","ville-black","transparent"],
+        color : [null,"transparent","ville-icon-base","transparent"],
         style : [null, "solid","solid","solid"],
         width : [0,4.5,4,4.5]
       }
@@ -152,7 +152,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
    {
    	  style :
       {
-        color : [null,"transparent","ville-black","transparent"],
+        color : [null,"transparent","ville-icon-base","transparent"],
         style : [null, "solid","solid","solid"],
         width : [0,3.5,3,3.5]
       }
@@ -162,7 +162,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
    {
    	  style :
       {
-        color : ["ville-black","transparent",null,"transparent"],
+        color : ["ville-icon-base","transparent",null,"transparent"],
         style : ["solid", "solid",null,"solid"],
         width : [4,4.5,0,4.5]
       }
@@ -192,7 +192,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
    {
    	  style :
       {
-        color : ["ville-black","transparent",null,"transparent"],
+        color : ["ville-icon-base","transparent",null,"transparent"],
         style : ["solid", "solid",null,"solid"],
         width : [3,3.5,0,3.5]
       }
@@ -222,7 +222,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
    {
    	  style :
       {
-        color : ["transparent",null,"transparent","ville-black"],
+        color : ["transparent",null,"transparent","ville-icon-base"],
         style : ["solid",null,"solid","solid"],
         width : [3.5,0,3.5,4]
       }
@@ -232,10 +232,10 @@ qx.Theme.define("ville.theme.clean.Decoration",
    {
    	  style :
       {
-        color : ["transparent",null,"transparent","ville-black"],
+        color : ["transparent",null,"transparent","ville-icon-base"],
         style : ["solid",null,"solid","solid"],
         width : [3.5,0,3.5,4],
-        shadowColor : "ville-black",
+        shadowColor : "ville-icon-base",
         shadowLength : [0, 2],
         shadowBlurRadius : 0,
         shadowSpreadRadius : 0
@@ -248,7 +248,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
     
     style :
    	  {
-        shadowColor : "ville-black",
+        shadowColor : "ville-icon-base",
         shadowLength : [0, 2],
         shadowBlurRadius : 0,
         shadowSpreadRadius : 0
@@ -269,7 +269,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
    {
    	  style :
       {
-        color : ["transparent","ville-black","transparent",null],
+        color : ["transparent","ville-icon-base","transparent",null],
         style : ["solid", "solid","solid",null],
         width : [3.5,4,3.5,0]
       }
@@ -291,11 +291,33 @@ qx.Theme.define("ville.theme.clean.Decoration",
       {
         radius : 10,
         width : 1,
-        color : "ville-black",
+        color : "ville-icon-base",
         innerColor: "white",
         innerWidth: 3
       }
     },
+
+    "ville-icon-tree-file" :
+   {
+   	  style :
+   	  {
+        radius : 3,
+        color : "text",
+        style : "solid",
+        width : 1
+   	  }
+   },
+
+   "ville-icon-tree-folder" :
+   {
+   	  style :
+   	  {
+        radius : 1,
+        color : "text",
+        style : "solid",
+        width : 2
+   	  }
+   },
   
 
     /*
@@ -309,7 +331,8 @@ qx.Theme.define("ville.theme.clean.Decoration",
       {
         radius : 3,
         width : 0,
-        color : "button-border"
+        color : "button-border",
+        backgroundColor : "button-box-bright"
       }
     },
 
@@ -1236,39 +1259,6 @@ qx.Theme.define("ville.theme.clean.Decoration",
 	      radius: [ 0, 0, 0, 0 ]
 	    }
     },
-    
-    "blue-top-box" :
-    {
-      include : "white-box",
-      
-      style :
-      {
-        width: [2,1,1,1],
-        colorTop: "box-border-blue",
-        radius: [ 4, 4, 3, 3 ]
-      }
-    },
-    
-    "orange-top-box" :
-    {
-      include : "blue-top-box",
-      
-      style :
-      {
-        colorTop: "box-border-orange"
-      }
-    },
-    
-    "green-top-box" :
-    {
-      include : "blue-top-box",
-      
-      style :
-      {
-        colorTop: "box-border-green"
-      }
-    },
-
 
     /*
     ---------------------------------------------------------------------------
@@ -1805,12 +1795,12 @@ qx.Theme.define("ville.theme.clean.Decoration",
 	      innerWidthLeft: 3,
 	      innerWidthRight: 3,
 	      innerWidthBottom: 0,
-        colorTop : "gray",
-        colorBottom : "gray",
-        colorLeft : "gray",
+        colorTop : "text-darker",
+        colorBottom : "text-darker",
+        colorLeft : "text-darker",
         innerColorLeft: "table-header",
         innerColorRight: "table-header",
-        colorRight : "gray"
+        colorRight : "text-darker"
     	}
     },
 
@@ -1826,12 +1816,12 @@ qx.Theme.define("ville.theme.clean.Decoration",
 	      innerWidthLeft: 3,
 	      innerWidthRight: 3,
 	      innerWidthBottom: 0,
-        colorTop : "black",
-        colorBottom : "black",
-        colorLeft : "black",
+        colorTop : "text",
+        colorBottom : "text",
+        colorLeft : "text",
         innerColorLeft: "table-header",
         innerColorRight: "table-header",
-        colorRight : "black"
+        colorRight : "text"
     	}
     },
     
