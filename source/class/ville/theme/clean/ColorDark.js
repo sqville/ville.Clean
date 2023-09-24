@@ -21,7 +21,7 @@ qx.Theme.define("ville.theme.clean.ColorDark",
   colors :
   {    
     // main
-    "background" : "rgb(27,27,27)",//"#000000",//"#ffffff"
+    "background" : "rgb(27, 27, 27)",//"#000000",//"#ffffff"
     "light-background" : "#E0ECFF",
 
     // backgrounds
@@ -30,7 +30,7 @@ qx.Theme.define("ville.theme.clean.ColorDark",
     "background-selected-dark" : "#5685D6",
     "background-disabled" : "#F7F7F7",
     "background-disabled-checked" : "#BBBBBB",
-    "background-pane" : "#ffffff",
+    "background-pane" : [27, 27, 27],
     "background-invalid" : "#fff0f0",
     "background-group-item" : "#BABABA",
 
@@ -45,7 +45,7 @@ qx.Theme.define("ville.theme.clean.ColorDark",
     
     // combobox
     "combobox-hovered" : "#F2F2F2",
-    "combobox-item-selected" : "#F7F7F7",
+    "combobox-item-selected" : "#3d3d3d",//"#F7F7F7",
 
     // list
     "group-item-" : "#ffffff",

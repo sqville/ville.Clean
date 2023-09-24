@@ -208,8 +208,23 @@ qx.Theme.define("ville.theme.clean.Appearance",
       style : function(states)
       {
         return {
-          icon : ville.theme.clean.Image.URLS["arrow-" + (states.vertical ? "down" : "right")],
+          //icon : ville.theme.clean.Image.URLS["arrow-" + (states.vertical ? "down" : "right")],
+          icon : "",
           padding : [10, 12] 
+        };
+      }
+    },
+
+    "slidebar/button-forward/icon" :
+    {
+      include : "image",
+
+      style : function(states)
+      {
+        return {
+          decorator : states.vertical ? "ville-icon-arrow-down" : "ville-icon-arrow-right",
+          width : 0,
+          height : 0
         };
       }
     },
@@ -222,8 +237,23 @@ qx.Theme.define("ville.theme.clean.Appearance",
       style : function(states)
       {
         return {
-          icon : ville.theme.clean.Image.URLS["arrow-" + (states.vertical ? "up" : "left")],
+          //icon : ville.theme.clean.Image.URLS["arrow-" + (states.vertical ? "up" : "left")],
+          icon : "",
           padding : [10, 12] 
+        };
+      }
+    },
+
+    "slidebar/button-backward/icon" :
+    {
+      include : "image",
+
+      style : function(states)
+      {
+        return {
+          decorator : states.vertical ? "ville-icon-arrow-up" : "ville-icon-arrow-left",
+          width : 0,
+          height : 0  
         };
       }
     },
@@ -2272,16 +2302,20 @@ qx.Theme.define("ville.theme.clean.Appearance",
         if (!sheet.hasRule(prefixdecbase))
         {
           var rule1 = prefixdecbase;
-          var css1 = "clip-path: polygon(0 23%, 0 7%, 4% 0, 29% 0, 32% 7%, 60% 7%, 98% 7%, 100% 10%, 100% 100%, 15% 100%, 0 100%, 0% 85%);";
+          var css1 = 'clip-path: path("M 1 4.5 A 2.5 2.5 0 0 1 3.5 2 h 2.09 c 0.4 0 0.78 0.16 1.06 0.44 L 8 3.79 L 5.94 5.85 a 0.5 0.5 0 0 1 -0.35 0.15 H 1 V 4.5 Z M 1 7 v 4.5 A 2.5 2.5 0 0 0 3.5 14 h 9 a 2.5 2.5 0 0 0 2.5 -2.5 v -5 A 2.5 2.5 0 0 0 12.5 4 H 9.2 L 6.66 6.56 A 1.5 1.5 0 0 1 5.59 7 H 1 Z")';
+          sheet.addRule(rule1, css1);
+
+          rule1 = prefixdecbase + "-opened";
+          css1 = 'clip-path: path("M 1 4.5 v 4.97 l 1 -1.72 A 3.5 3.5 0 0 1 5.01 6 h 7.93 a 2.5 2.5 0 0 0 -2.45 -2 H 7.2 L 5.66 2.44 A 1.5 1.5 0 0 0 4.59 2 H 3.5 A 2.5 2.5 0 0 0 1 4.5 Z M 5.02 7 H 13 a 2 2 0 0 1 1.73 3 l -1.59 2.75 A 2.5 2.5 0 0 1 10.98 14 H 3 a 2 2 0 0 1 -1.73 -3 l 1.59 -2.75 A 2.5 2.5 0 0 1 5.02 7 Z")';
           sheet.addRule(rule1, css1);
         }
         
         return {
           marginLeft: 6,
           width : 15,
-          height : 11,
-          backgroundColor : states.opened ? "transparent" : "text",
-          decorator : "ville-icon-tree-folder"
+          height : 15,
+          backgroundColor : "text",
+          decorator : states.opened ? "ville-icon-tree-folder-opened" : "ville-icon-tree-folder"
         };
       }
     },
@@ -2317,10 +2351,23 @@ qx.Theme.define("ville.theme.clean.Appearance",
       include : "image",
       style : function(states)
       {
+        
+        var decorator = "ville-icon-tree-file";
+        var sheet = qx.ui.style.Stylesheet.getInstance();
+        var prefix = qx.theme.manager.Decoration.CSS_CLASSNAME_PREFIX;
+        var prefixdecbase = "." + prefix + decorator; 
+        //sheet.addRule(":root", "--compoundbrandbackground:" + qx.theme.manager.Color.getInstance().resolve("CompoundBrandBackground"));
+        if (!sheet.hasRule(prefixdecbase))
+        {
+          var rule1 = prefixdecbase;
+          var css1 = 'clip-path: path("M 9.59 5 a 0.5 0.5 0 0 0 -0.09 -1 H 6.41 a 0.5 0.5 0 0 0 0.09 1 h 3.09 Z M 10 8 a 0.5 0.5 0 0 1 -0.41 0.5 H 6.5 a 0.5 0.5 0 0 1 -0.09 -1 H 9.5 c 0.28 0 0.5 0.22 0.5 0.5 Z m -0.41 3.98 A 0.5 0.5 0 0 0 9.5 11 h -3 l -0.09 0.01 a 0.5 0.5 0 0 0 0.09 1 h 3 l 0.09 -0.02 Z M 3 3 c 0 -1.1 0.9 -2 2 -2 h 6 a 2 2 0 0 1 2 2 v 10 a 2 2 0 0 1 -2 2 H 5 a 2 2 0 0 1 -2 -2 V 3 Z m 8 -1 H 5 a 1 1 0 0 0 -1 1 v 10 a 1 1 0 0 0 1 1 h 6 a 1 1 0 0 0 1 -1 V 3 a 1 1 0 0 0 -1 -1 Z M 9.59 5 a 0.5 0.5 0 0 0 -0.09 -1 H 6.41 a 0.5 0.5 0 0 0 0.09 1 h 3.09 Z M 10 8 a 0.5 0.5 0 0 1 -0.41 0.5 H 6.5 a 0.5 0.5 0 0 1 -0.09 -1 H 9.5 c 0.28 0 0.5 0.22 0.5 0.5 Z m -0.41 3.98 A 0.5 0.5 0 0 0 9.5 11 h -3 l -0.09 0.01 a 0.5 0.5 0 0 0 0.09 1 h 3 l 0.09 -0.02 Z")';
+          sheet.addRule(rule1, css1);
+        }
+        
         return {
           //padding : [0, 4, 0, 0],
           //width : 18,
-          width : 11,
+          width : 15,
           height : 15,
           backgroundColor : "text",
           decorator : "ville-icon-tree-file"

@@ -44,8 +44,8 @@ qx.Theme.define("ville.theme.clean.Color",
     "tabviewspot-button-hovered" : "#F7F7F7",
     
     // combobox
-    "combobox-hovered" : "#F2F2F2",
-    "combobox-item-selected" : "#F7F7F7",
+    "combobox-hovered" : "#F7F7F7",
+    "combobox-item-selected" : "#eaeaea",//#F7F7F7",
 
     // list
     "group-item-" : "#ffffff",

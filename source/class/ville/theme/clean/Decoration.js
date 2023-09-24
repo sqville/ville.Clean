@@ -318,7 +318,8 @@ qx.Theme.define("ville.theme.clean.Decoration",
         width : 2
    	  }
    },
-  
+
+   "ville-icon-tree-folder-opened" : "ville-icon-tree-folder",
 
     /*
     ---------------------------------------------------------------------------
