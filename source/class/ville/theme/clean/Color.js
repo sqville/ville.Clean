@@ -109,8 +109,8 @@ qx.Theme.define("ville.theme.clean.Color",
     // 'border-main' is an alias of 'background-selected' (compatibility reasons)
     "border-main" : "#6694E3",
     "border-light" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 0.15)" : "#D8D8D8",
-    "border-light-darker" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 0.2)" : "#D8D8D8",
-    "border-light-shadow" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 0.15)" : "#D8D8D8",
+    "border-light-darker" : "rgba(0, 0, 0, 0.2)",
+    "border-light-shadow" : "rgba(0, 0, 0, 0.15)",
     "border-super-light" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 0.06)" : "#EEEEEE",
 
     // separator

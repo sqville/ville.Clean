@@ -321,6 +321,33 @@ qx.Theme.define("ville.theme.clean.Decoration",
 
    "ville-icon-tree-folder-opened" : "ville-icon-tree-folder",
 
+   "ville-icon-checkbox-checked" :
+   {
+   	  style :
+   	  {
+        radius : 1,
+        color : "text",
+        style : "solid",
+        width : 0
+   	  }
+   },
+
+   "ville-icon-checkbox-unchecked" :
+   {
+   	  style :
+   	  {
+        width : 0
+   	  }
+   },
+
+   "ville-icon-checkbox-undetermined" :
+   {
+   	  style :
+   	  {
+        width : 0
+   	  }
+   },
+
     /*
     ---------------------------------------------------------------------------
       BUTTON
@@ -1026,7 +1053,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
     
     style :
      {
-       radius : 10
+       radius : 1000
      }
    },
 
@@ -1928,10 +1955,10 @@ qx.Theme.define("ville.theme.clean.Decoration",
     {
       style :
       {
-        radius : 10,
+        radius : 1000,
         width : 1,
         color : "border-light-darker",
-        innerColor: "white",
+        innerColor: "background",
         innerWidth: 3
       }
     },

@@ -55,8 +55,8 @@ qx.Theme.define("ville.theme.clean.ColorDark",
     "group-item" : "#ffffff",
 
     // scrollbar
-    "scrollbar-bright" : "#F1F1F1",
-    "scrollbar-dark" : "#EBEBEB",
+    "scrollbar-bright" : "#292929",//"#F1F1F1",
+    "scrollbar-dark" : "#1f1f1f",//"#EBEBEB",
 
     // form
     "button" : "#292929",
@@ -106,8 +106,8 @@ qx.Theme.define("ville.theme.clean.ColorDark",
     // 'border-main' is an alias of 'background-selected' (compatibility reasons)
     "border-main" : "rgb(133, 133, 133)",//"#6694E3",
     "border-light" : "#858585",
-    "border-light-darker" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 0.2)" : "#D8D8D8",
-    "border-light-shadow" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 0.15)" : "#D8D8D8",
+    "border-light-darker" : "rgb(133, 133, 133)",
+    "border-light-shadow" : "#858585",
     "border-super-light" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 0.06)" : "#EEEEEE",
 
     // separator
