@@ -71,9 +71,9 @@ qx.Theme.define("ville.theme.clean.Color",
     "button-box-bright-checked" : "#babbbc",
     "button-box-dark-pressed" : "#F5F5F5",
     "border-lead" : "#888888",
-    "button-text" : "rgba(0, 0, 0, 0.6)",
-    "button-text-hovered" : "rgba(0, 0, 0, 0.8)",
-    "button-text-pressed" : "rgba(0, 0, 0, 0.9)",
+    "button-text" : "rgba(0, 0, 0, 1)",
+    "button-text-hovered" : "rgba(0, 0, 0, 1)",
+    "button-text-pressed" : "rgba(0, 0, 0, 1)",
     "button-focus-shadow" : "rgba(81, 167, 232, 0.8)",
     
     //SQ New
@@ -87,9 +87,9 @@ qx.Theme.define("ville.theme.clean.Color",
     "progressbar-warning" : qx.core.Environment.get("css.rgba") ? "rgba(242, 192, 55, 1)" : "#F2C037",
     "progressbar-error" : qx.core.Environment.get("css.rgba") ? "rgba(219, 40, 40, 1)" : "#DB2828",	
 	    
-    "ville-icon-base" : "rgba(0, 0, 0, 1)",
-    "ville-arrow-gray" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 0.6)" : "#444444",
-    "ville-arrow-med-gray" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 0.4)" : "#444444",
+    "ville-icon-base" : [0, 0, 0],
+    "ville-arrow-gray" : [0, 0, 0],
+    "ville-arrow-med-gray" : [0, 0, 0],
 
     // window
     "window-border" : "#2E3A46",
@@ -118,8 +118,8 @@ qx.Theme.define("ville.theme.clean.Color",
 
     // text
     "text-combobox-listitem" : "rgba(0, 0, 0, 0.6)", //NOT USED
-    "text" : "rgba(0, 0, 0, 0.8)",
-    "text-darker" : "rgba(0, 0, 0, 0.9)",
+    "text" : [0, 0, 0],
+    "text-darker" : [0, 0, 0],
     "text-disabled" : "rgba(0, 0, 0, 0.4)",
     "text-selected" : "#000000",
     "text-placeholder" : "rgba(0, 0, 0, 0.4)",

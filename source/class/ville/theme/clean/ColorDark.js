@@ -114,12 +114,12 @@ qx.Theme.define("ville.theme.clean.ColorDark",
     "border-separator" : "#858585",
 
     // text
-    "text-combobox-listitem" : "rgba(0, 0, 0, 0.6)", //NOT USED
+    "text-combobox-listitem" : "rgba(255, 255, 255, 0.6)", //NOT USED
     "text" : "#ffffff",//"rgba(0, 0, 0, 0.8)",
     "text-darker" : "rgba(255, 255, 255, 0.8)",
-    "text-disabled" : "#ffffff",//"rgba(0, 0, 0, 0.4)",
-    "text-selected" : "#000000",
-    "text-placeholder" : "rgba(0, 0, 0, 0.4)",
+    "text-disabled" : "rgba(255, 255, 255, 0.4)",
+    "text-selected" : "#ffffff",
+    "text-placeholder" : "rgba(255, 255, 255, 0.4)",
 
     // tooltip
     "tooltip" : "#FFFFE1",

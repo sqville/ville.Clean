@@ -325,10 +325,13 @@ qx.Theme.define("ville.theme.clean.Decoration",
    {
    	  style :
    	  {
-        radius : 1,
+        radius : 3,
         color : "text",
         style : "solid",
-        width : 0
+        width : 1,
+        innerColor: "text",
+        innerWidth: 1,
+        clipPath: 'path("M 14.05 3.49 c 0.28 0.3 0.27 0.77 -0.04 1.06 l -7.93 7.47 A 0.85 0.85 0 0 1 4.9 12 L 2.22 9.28 a 0.75 0.75 0 1 1 1.06 -1.06 l 2.24 2.27 l 7.47 -7.04 a 0.75 0.75 0 0 1 1.06 0.04 Z")'
    	  }
    },
 
@@ -336,7 +339,10 @@ qx.Theme.define("ville.theme.clean.Decoration",
    {
    	  style :
    	  {
-        width : 0
+        radius : 3,
+        color : "text",
+        style : "solid",
+        width : 1
    	  }
    },
 

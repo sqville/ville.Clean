@@ -980,7 +980,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
       
       style : function(states)
       {
-        
+ 
         return {
           decorator : "menu-checkbox-checked",
           width: 17,
@@ -1348,8 +1348,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
 
         return {
           decorator : decorator,
-          width: 18,
-          height: 18,
+          width: 16,
+          height: 16,
           backgroundColor : backgroundColor
         };
       }
@@ -1380,6 +1380,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
 
       style : function(states)
       {        
+        qx.Class.include(qx.ui.decoration.Decorator, ville.theme.clean.MClipPath); 
+        
         //var icon;
         var decorator = "checkbox";
 
@@ -1421,7 +1423,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
         return {
           //icon: icon,
           icon : "",
-          decorator : decorator,
+          //decorator : decorator,
           backgroundColor : "background",
           padding : 0,
           gap: 10
@@ -1434,7 +1436,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
       style : function(states)
       {
         
-        /*
+        
         var decorator = "checkbox";
 
         if (states.focused && !states.invalid) {
@@ -1442,8 +1444,9 @@ qx.Theme.define("ville.theme.clean.Appearance",
         }
 
         decorator += states.invalid && !states.disabled ? "-invalid" : "";
-        */
+        
 
+        /*
         var decorator = "ville-icon-checkbox-checked";
         var sheet = qx.ui.style.Stylesheet.getInstance();
         var prefix = qx.theme.manager.Decoration.CSS_CLASSNAME_PREFIX;
@@ -1455,8 +1458,9 @@ qx.Theme.define("ville.theme.clean.Appearance",
           var css1 = 'clip-path: path("M 14.05 3.49 c 0.28 0.3 0.27 0.77 -0.04 1.06 l -7.93 7.47 A 0.85 0.85 0 0 1 4.9 12 L 2.22 9.28 a 0.75 0.75 0 1 1 1.06 -1.06 l 2.24 2.27 l 7.47 -7.04 a 0.75 0.75 0 0 1 1.06 0.04 Z")';
           sheet.addRule(rule1, css1);
         }
-
-        //var padding;
+        */
+        
+        decorator = "ville-icon-checkbox-checked";
         var bgcolor = "text";
         // Checked
         if (states.checked) {
@@ -1497,7 +1501,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
           decorator: decorator,
           width: 17,
           height: 17,
-          padding : 0,
+          padding : 1,
           //padding: padding,
           //backgroundColor : states.undetermined ? bckgrdcolr : "background"
           backgroundColor : bgcolor
