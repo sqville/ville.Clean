@@ -38,6 +38,7 @@ qx.Mixin.define("ville.theme.clean.MClipPath", {
         var clippath = this.getClipPath();
 
         if (clippath) {
+          //styles["clip-path"] = "content-box";
           styles["clip-path"] = clippath;
         }
       },

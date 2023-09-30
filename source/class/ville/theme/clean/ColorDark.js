@@ -77,7 +77,8 @@ qx.Theme.define("ville.theme.clean.ColorDark",
     "button-focus-shadow" : "rgba(81, 167, 232, 0.8)",
     
     //SQ New
-    "textfield-selected" : "rgba(133, 183, 217, 1)",
+    //"textfield-selected" : [133, 183, 217], //#85b7d9
+    "textfield-selected" : "#77a4c3",
 	  "textfield-selected-darker" : "rgba(0, 0, 0, 0.5)",
 	
     //SQ New

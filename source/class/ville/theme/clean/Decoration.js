@@ -84,7 +84,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
     {
       style : {
         width: [2,2,2,2],
-        color : "black",
+        color : "text",
         style : "dotted"
       }
     },
@@ -144,7 +144,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
    	  
    	  style :
       {
-        color : [null,"transparent","white","transparent"]
+        color : [null,"transparent","ville-icon-base","transparent"]
       }
    },
    
@@ -184,7 +184,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
    	  
    	  style :
       {
-        color : ["white","transparent",null,"transparent"]
+        color : ["ville-icon-base","transparent",null,"transparent"]
       }
    },
    
@@ -214,7 +214,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
    	  
    	  style :
       {
-        color : ["transparent",null,"transparent","white"]
+        color : ["transparent",null,"transparent","ville-icon-base"]
       }
    },
    
@@ -328,10 +328,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
         radius : 3,
         color : "text",
         style : "solid",
-        width : 1,
-        innerColor: "text",
-        innerWidth: 1,
-        clipPath: 'path("M 14.05 3.49 c 0.28 0.3 0.27 0.77 -0.04 1.06 l -7.93 7.47 A 0.85 0.85 0 0 1 4.9 12 L 2.22 9.28 a 0.75 0.75 0 1 1 1.06 -1.06 l 2.24 2.27 l 7.47 -7.04 a 0.75 0.75 0 0 1 1.06 0.04 Z")'
+        width : 1
    	  }
    },
 
@@ -2033,8 +2030,9 @@ qx.Theme.define("ville.theme.clean.Decoration",
     	
     	style :
     	{
-        innerWidth : 0,
-        color : "textfield-selected"
+        innerWidth : 0
+        //innerColor : "textfield-selected",
+        //color : "text"
     	}
     },
 
@@ -2061,8 +2059,9 @@ qx.Theme.define("ville.theme.clean.Decoration",
       include : "checkbox",
       style :
       {
-        innerWidth : [6,3],
-        innerColor: "white"
+        radius : 3,
+        innerWidth : [4,4],
+        innerColor: "background"
       }
     },
 

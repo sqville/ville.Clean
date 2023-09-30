@@ -34,6 +34,9 @@ qx.Theme.define("ville.theme.clean.Color",
     "background-invalid" : "#fff0f0",
     "background-group-item" : "#BABABA",
 
+    // checkbox
+    "checkbox-selected" : [133, 183, 217], //#85b7d9
+
     // tabview
     "tabview-unselected" : "#1866B5",
     "tabview-button-border" : "#134983",
@@ -77,7 +80,8 @@ qx.Theme.define("ville.theme.clean.Color",
     "button-focus-shadow" : "rgba(81, 167, 232, 0.8)",
     
     //SQ New
-    "textfield-selected" : "rgba(133, 183, 217, 1)",
+    //"textfield-selected" : [133, 183, 217], //#85b7d9
+    "textfield-selected" : "#6a92ad",//"#77a4c3",
 	  "textfield-selected-darker" : "rgba(0, 0, 0, 0.5)",
 	
     //SQ New
@@ -108,8 +112,8 @@ qx.Theme.define("ville.theme.clean.Color",
     // borders
     // 'border-main' is an alias of 'background-selected' (compatibility reasons)
     "border-main" : "#6694E3",
-    "border-light" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 0.15)" : "#D8D8D8",
-    "border-light-darker" : "rgba(0, 0, 0, 0.2)",
+    "border-light" : "rgba(0, 0, 0, 0.15)",//"#D8D8D8",
+    "border-light-darker" : "rgba(0, 0, 0, 0.3)",
     "border-light-shadow" : "rgba(0, 0, 0, 0.15)",
     "border-super-light" : qx.core.Environment.get("css.rgba") ? "rgba(0, 0, 0, 0.06)" : "#EEEEEE",
 
