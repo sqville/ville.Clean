@@ -6,11 +6,10 @@
 **Additional Benefits**
 * Reduced reliance on external images for basic control graphics such as arrows, radio buttons and window buttons (all done with qooxdoo appearance and decoration entries)
 * Leveraged SVG files for decoration images where possible to improve image sharpness
-* Added control appearances for Buttons, TabViews and GroupBoxes (see Extra tab in the included widgetbrowser demo application)
 
-**Form Controls**
-<img src="ville_Clean_Form.PNG" alt="Screen shot example">
-
+<!-- DEMOS -->
+## Demo
+Using Qooxdoos [WidgetBrowser](https://sqville.github.io/ville.Clean/published/)
 
 <!-- GETTING STARTED -->
 ## Using the Theme in your Application
@@ -31,16 +30,10 @@ now you just have to modify your compile.json to enable the theme:
 ],
 ```
 
-<!-- DEMOS -->
-## Demo
-Using Qooxdoos [WidgetBrowser](https://sqville.github.io/ville.Clean/published/)
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
 
 
 <!-- CONTACT -->
