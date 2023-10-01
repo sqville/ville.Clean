@@ -2013,7 +2013,14 @@ qx.Theme.define("ville.theme.clean.Decoration",
     	}
     },
 
-    "checkbox-checked-disabled" : "checkbox-checked",   
+    "checkbox-checked-disabled" :
+    {
+      include : "checkbox-checked",
+      style :
+      {
+        color : "text-disabled"
+      }
+    },  
 
     "checkbox-focused" :
     {

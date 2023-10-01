@@ -21,17 +21,17 @@ qx.Theme.define("ville.theme.clean.ColorDark",
   colors :
   {    
     // main
-    "background" : "rgb(27, 27, 27)",//"#000000",//"#ffffff"
+    "background" : [27, 27, 27],//"#000000",//"#ffffff"
     "light-background" : "#E0ECFF",
 
     // backgrounds
     "background-selected" : "#6694E3",
-    "background-selected-disabled" : "#CDCDCD",
+    "background-selected-disabled" : "#3d3d3d",//"#CDCDCD",
     "background-selected-dark" : "#5685D6",
-    "background-disabled" : "#F7F7F7",
+    "background-disabled" : [27, 27, 27],//"#F7F7F7",
     "background-disabled-checked" : "#BBBBBB",
     "background-pane" : [27, 27, 27],
-    "background-invalid" : "#fff0f0",
+    "background-invalid" : [27, 27, 27],//"#fff0f0",
     "background-group-item" : "#BABABA",
 
     // tabview
@@ -62,7 +62,7 @@ qx.Theme.define("ville.theme.clean.ColorDark",
     "button" : "#292929",
     "button-border" : "#BBB",
     "button-border-hovered" : "#939393",  
-    "invalid" : "#FF0000",
+    "invalid" : "#FF0000", //red
 
     "button-box-bright" : "#292929",//"#e0e1e2",
     "button-box-bright-hovered" : "#3d3d3d",//"#cacbcd",

@@ -1426,8 +1426,6 @@ qx.Theme.define("ville.theme.clean.Appearance",
         var bgcolor = "background";
         // Checked
         if (states.checked) {
-          //bgcolor = "text";
-          //decorator = "checkbox-checked";
           decorator = "checkbox-checked-focused";
           if (states.focused) {
             decorator = "checkbox-checked-focused"; 
@@ -1441,9 +1439,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
           // Undetermined
         } else if (states.undetermined) {
           decorator = "checkbox-undetermined";
-          //bgcolor = "text";
           bgcolor = "textfield-selected";
-          /*if (states.focused) {
+          if (states.focused) {
             decorator = "checkbox-undetermined-focused";
           }
           if (states.invalid) {
@@ -1451,8 +1448,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
           }
           if (states.disabled) {
             decorator = "checkbox-undetermined-disabled";
-            bckgrdcolr = "text-disabled";
-          }*/
+            //bckgrdcolr = "text-disabled";
+          }
         } else {
           bgcolor = "background";
         }
@@ -2349,11 +2346,12 @@ qx.Theme.define("ville.theme.clean.Appearance",
 
     "tree-folder/label" :
     {
+      include : "label",
+      
       style : function(states)
       {
         return {
-          padding : [ 1, 4 ],
-          textColor : states.selected && !states.disabled ? "text-selected" : "text"
+          padding : [ 1, 4 ]
         };
       }
     },
