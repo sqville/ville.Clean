@@ -4,9 +4,9 @@
 **ville.Clean** is a [Qooxdoo](https://qooxdoo.org/) theme inspired by [Semantic UI](https://semantic-ui.com/).
 
 **Benefits**
-* Now includes light and dark themes
-* Reduced reliance on external images for basic control graphics such as arrows, radio buttons and window buttons (all done with qooxdoo appearance and decoration entries)
-* Leveraged SVG files for decoration images where possible to improve image sharpness
+* Now includes light (Clean) and dark (CleanDark) themes (starting from v2)
+* Reduced reliance on external images for basic control graphics such as arrows, radio buttons and window buttons, and tree icons (done with qooxdoo appearance and decoration entries)
+* Leverages SVG files for decoration images where possible to improve image sharpness
 
 <!-- DEMOS -->
 ## Demo
