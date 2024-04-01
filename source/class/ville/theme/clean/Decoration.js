@@ -18,7 +18,6 @@
  */
 qx.Theme.define("ville.theme.clean.Decoration",
 {
-  
   aliases : {
     decoration : "ville/theme/clean/decoration"
   },

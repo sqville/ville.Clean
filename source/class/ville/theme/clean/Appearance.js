@@ -24,7 +24,7 @@
  * 
  */
 qx.Theme.define("ville.theme.clean.Appearance",
-{
+{    
   appearances :
   {    
     /*
@@ -88,6 +88,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
 
       style : function(states)
       {
+        //console.log(this.sqtest);
         return {
           backgroundColor : "tooltip",
           textColor : "tooltip-text",
@@ -221,11 +222,12 @@ qx.Theme.define("ville.theme.clean.Appearance",
       include : "image",
 
       style : function(states)
-      {
+      {  
         return {
-          decorator : "ville-icon-arrow-right",
+          decorator : states.vertical ? "ville-icon-arrow-down" : "ville-icon-arrow-right",
           width : 0,
-          height : 0
+          height : 0,
+          opacity : !states.replacement && states.disabled ? 0.3 : undefined
         };
       }
     },

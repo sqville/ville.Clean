@@ -23,4 +23,5 @@ qx.Theme.define("ville.theme.Clean",
     font : ville.theme.clean.Font,
     icon : qx.theme.icon.Tango
   }
+
 });
