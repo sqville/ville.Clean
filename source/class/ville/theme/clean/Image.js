@@ -92,8 +92,8 @@ qx.Class.define("ville.theme.clean.Image",
 
       // table
       //"select-column-order" : "decoration/table/select-column-order.png", //Replaced by pure Qx
-      //"table-ascending" : "decoration/table/ascending.png",  //Not used
-      //"table-descending" : "decoration/table/descending.png", //Not used
+      "table-ascending" : "decoration/table/ascending.png",  // Retained for theme switching since names are created dynamically
+      "table-descending" : "decoration/table/descending.png", // Retained for theme switching since names are created dynamically
 
 	    // tree virtual
 	    "tree-minus" : "decoration/treevirtual/minus.gif",
@@ -111,10 +111,10 @@ qx.Class.define("ville.theme.clean.Image",
       "treevirtual-cross" : "decoration/treevirtual/cross.gif",
 
       // menu
-      //"menu-checkbox" : "decoration/menu/checkbox.gif", //Replaced with Qx + CSS
+      "menu-checkbox" : "decoration/menu/checkbox.gif", // Retained for theme switching since names are created dynamically
       //"menu-checkbox-invert" : "decoration/menu/checkbox-invert.gif", //Replaced with Qx + CSS
       //"menu-radiobutton-invert" : "decoration/menu/radiobutton-invert.gif", //Replaced with Qx + CSS
-      //"menu-radiobutton" : "decoration/menu/radiobutton.gif", //Replaced with pure Qx
+      "menu-radiobutton" : "decoration/menu/radiobutton.gif", // Retained for theme switching since names are created dynamically
 
       // tabview
       "tabview-close" : "decoration/tabview/close.svg",
