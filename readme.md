@@ -20,12 +20,12 @@ Using Qooxdoos [WidgetBrowser](https://sqville.github.io/ville.Clean/published/)
 To use the Theme in your application, go into the application root directory and install the theme into your project:
 
 ```sh
-$ qx package update
-$ qx package list
-$ qx package install sqville/ville.Clean
+qx package update
+qx package list
+qx package install sqville/ville.Clean
+```
 
 now you just have to modify your compile.json to enable the theme:
-```
 
 ```javascript
 "applications": [
