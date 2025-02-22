@@ -21,10 +21,16 @@
 /**
  * The Clean appearance theme.
  * @asset(qx/icon/${qx.icontheme}/22/apps/office-calendar.png)
+ * @require(qx.ui.basic.Image)
+ * @require(ville.theme.clean.MImage)
  * 
  */
 qx.Theme.define("ville.theme.clean.Appearance",
 {    
+  boot : function() {
+    qx.Class.include(qx.ui.basic.Image, ville.theme.clean.MImage);
+  },
+  
   appearances :
   {    
     /*
@@ -153,7 +159,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
         if (states.copy) {
           icon = "copy";
           retval = {
-            source : ville.theme.clean.Image.URLS["cursor-" + icon],
+            source : ville.theme.clean.Image.DATAURLS["cursor-" + icon],
             decorator : "cursor-" + icon,
             position : "right-top",
             offset : [ 2, 16, 2, 6 ]
@@ -171,7 +177,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
         } else if (states.alias) {
           icon = "alias";
           retval = {
-            source : ville.theme.clean.Image.URLS["cursor-" + icon],
+            source : ville.theme.clean.Image.DATAURLS["cursor-" + icon],
             decorator : "cursor-" + icon,
             position : "right-top",
             offset : [ 2, 16, 2, 6 ]
@@ -179,7 +185,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
         } else {
           icon = "nodrop";
           retval = {
-            source : ville.theme.clean.Image.URLS["cursor-" + icon],
+            source : ville.theme.clean.Image.DATAURLS["cursor-" + icon],
             position : "right-top",
             offset : [ 2, 16, 2, 6 ],
             decorator : "cursor-" + icon
@@ -971,7 +977,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
       style : function(states)
       {
         return {
-          icon : states.checked ? ville.theme.clean.Image.URLS["checkbox-checked"] : ville.theme.clean.Image.URLS["blank"]
+          icon : states.checked ? ville.theme.clean.Image.DATAURLS["checkbox-checked"] : ville.theme.clean.Image.URLS["blank"]
         };
       }
     },
@@ -1392,10 +1398,10 @@ qx.Theme.define("ville.theme.clean.Appearance",
 
         // Checked
         if (states.checked && !states.disabled) {
-          icon = ville.theme.clean.Image.URLS["checkbox-checked"];
+          icon = ville.theme.clean.Image.DATAURLS["checkbox-checked"];
         // Undetermined
         } else if (states.checked && states.disabled) {
-          icon = ville.theme.clean.Image.URLS["checkbox-checked-disabled"];
+          icon = ville.theme.clean.Image.DATAURLS["checkbox-checked-disabled"];
         } else if (states.undetermined) {
           icon = "";
         // Unchecked
@@ -1450,7 +1456,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
           }
           if (states.disabled) {
             decorator = "checkbox-undetermined-disabled";
-            //bckgrdcolr = "text-disabled";
+            bgcolor = "text-disabled";
           }
         } else {
           bgcolor = "background";
@@ -1587,6 +1593,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
         };
       }
     },
+
+    "selectbox-arrow-button": "widget",
 
 
     /*
@@ -2320,6 +2328,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
       include : "image",
       style : function(states)
       {
+        /*
         var decorator = "ville-icon-tree-folder";
         var sheet = qx.ui.style.Stylesheet.getInstance();
         var prefix = qx.theme.manager.Decoration.CSS_CLASSNAME_PREFIX;
@@ -2334,14 +2343,22 @@ qx.Theme.define("ville.theme.clean.Appearance",
           rule1 = prefixdecbase + "-opened";
           css1 = 'clip-path: path("M 1 4.5 v 4.97 l 1 -1.72 A 3.5 3.5 0 0 1 5.01 6 h 7.93 a 2.5 2.5 0 0 0 -2.45 -2 H 7.2 L 5.66 2.44 A 1.5 1.5 0 0 0 4.59 2 H 3.5 A 2.5 2.5 0 0 0 1 4.5 Z M 5.02 7 H 13 a 2 2 0 0 1 1.73 3 l -1.59 2.75 A 2.5 2.5 0 0 1 10.98 14 H 3 a 2 2 0 0 1 -1.73 -3 l 1.59 -2.75 A 2.5 2.5 0 0 1 5.02 7 Z")';
           sheet.addRule(rule1, css1);
+        }*/
+        var decorator = "ville-icon-tree-folder";
+        var clippath = ville.theme.clean.Image.CLIPPATHS["tree-folder"];
+
+        if (states.opened) {
+          decorator = "ville-icon-tree-folder-opened";
+          clippath = ville.theme.clean.Image.CLIPPATHS["tree-folder-open"];
         }
-        
+          
         return {
           marginLeft: 6,
           width : 15,
           height : 15,
           backgroundColor : "text",
-          decorator : states.opened ? "ville-icon-tree-folder-opened" : "ville-icon-tree-folder"
+          decorator : decorator,
+          clipPath : clippath
         };
       }
     },
@@ -2379,7 +2396,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
       style : function(states)
       {
         
-        var decorator = "ville-icon-tree-file";
+        /*var decorator = "ville-icon-tree-file";
         var sheet = qx.ui.style.Stylesheet.getInstance();
         var prefix = qx.theme.manager.Decoration.CSS_CLASSNAME_PREFIX;
         var prefixdecbase = "." + prefix + decorator; 
@@ -2389,7 +2406,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
           var rule1 = prefixdecbase;
           var css1 = 'clip-path: path("M 9.59 5 a 0.5 0.5 0 0 0 -0.09 -1 H 6.41 a 0.5 0.5 0 0 0 0.09 1 h 3.09 Z M 10 8 a 0.5 0.5 0 0 1 -0.41 0.5 H 6.5 a 0.5 0.5 0 0 1 -0.09 -1 H 9.5 c 0.28 0 0.5 0.22 0.5 0.5 Z m -0.41 3.98 A 0.5 0.5 0 0 0 9.5 11 h -3 l -0.09 0.01 a 0.5 0.5 0 0 0 0.09 1 h 3 l 0.09 -0.02 Z M 3 3 c 0 -1.1 0.9 -2 2 -2 h 6 a 2 2 0 0 1 2 2 v 10 a 2 2 0 0 1 -2 2 H 5 a 2 2 0 0 1 -2 -2 V 3 Z m 8 -1 H 5 a 1 1 0 0 0 -1 1 v 10 a 1 1 0 0 0 1 1 h 6 a 1 1 0 0 0 1 -1 V 3 a 1 1 0 0 0 -1 -1 Z M 9.59 5 a 0.5 0.5 0 0 0 -0.09 -1 H 6.41 a 0.5 0.5 0 0 0 0.09 1 h 3.09 Z M 10 8 a 0.5 0.5 0 0 1 -0.41 0.5 H 6.5 a 0.5 0.5 0 0 1 -0.09 -1 H 9.5 c 0.28 0 0.5 0.22 0.5 0.5 Z m -0.41 3.98 A 0.5 0.5 0 0 0 9.5 11 h -3 l -0.09 0.01 a 0.5 0.5 0 0 0 0.09 1 h 3 l 0.09 -0.02 Z")';
           sheet.addRule(rule1, css1);
-        }
+        }*/
         
         return {
           //padding : [0, 4, 0, 0],
@@ -2397,7 +2414,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
           width : 15,
           height : 15,
           backgroundColor : "text",
-          decorator : "ville-icon-tree-file"
+          decorator : "ville-icon-tree-file",
+          clipPath : ville.theme.clean.Image.CLIPPATHS["tree-file"]
           //scale : true
         };
       }
@@ -2482,7 +2500,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
       style : function(states)
       {
         return {
-          backgroundColor : states.hovered ? "black" : "gray",
+          backgroundColor : states.hovered ? "window-minimize-button-hovered" : "gray",
           width : 10,
           height : 4
         };
@@ -2557,7 +2575,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
       style : function(states)
       {
         return {
-          icon : states.hovered ? ville.theme.clean.Image.URLS["tabview-close-hovered"] : ville.theme.clean.Image.URLS["tabview-close"],
+          icon : states.hovered ? ville.theme.clean.Image.DATAURLS["tabview-close-hovered"] : ville.theme.clean.Image.DATAURLS["tabview-close"],
           padding : [ 1, 1 ],
           marginLeft: 6,
           cursor : states.disabled ? undefined : "pointer"
@@ -3197,6 +3215,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
     },
 
     "tabview-page/button/icon" : "image",
+
     "tabview-page/button/close-button" :
     {
       alias : "atom",
@@ -3205,7 +3224,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
         return {
           cursor : states.disabled ? undefined : "pointer",
           marginLeft: 12,
-          icon : states.hovered ? ville.theme.clean.Image.URLS["tabview-close-hovered"] : ville.theme.clean.Image.URLS["tabview-close"]
+          icon : states.hovered ? ville.theme.clean.Image.DATAURLS["tabview-close-hovered"] : ville.theme.clean.Image.DATAURLS["tabview-close"]
         };
       }
     },

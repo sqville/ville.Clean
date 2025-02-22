@@ -15,9 +15,16 @@
 
 /**
  * The simple qooxdoo decoration theme.
+ * 
+ * @require(qx.ui.decoration.Decorator)
+ * @require(ville.theme.clean.MBackgroundImageInline)
  */
 qx.Theme.define("ville.theme.clean.Decoration",
 {
+  boot : function(){
+    qx.Class.include(qx.ui.decoration.Decorator, ville.theme.clean.MBackgroundImageInline);
+  },
+
   aliases : {
     decoration : "ville/theme/clean/decoration"
   },
@@ -1204,7 +1211,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
       
       style :
       {
-        color : "black"
+        color : "window-minimize-button-hovered"
       }
     },
     
@@ -1243,7 +1250,8 @@ qx.Theme.define("ville.theme.clean.Decoration",
       
       style :
       {
-        color : "black"
+        color : "window-minimize-button-hovered",
+        shadowColor : "window-minimize-button-hovered"
       }
     },
 
@@ -1310,10 +1318,10 @@ qx.Theme.define("ville.theme.clean.Decoration",
     {
       style :
       {
-        backgroundImage: "ville/theme/clean/decoration/slider/line.png",
-        backgroundRepeat: 'repeat',
-        backgroundPositionX: "center",
-        backgroundPositionY: "center"
+        backgroundImageInline: ville.theme.clean.Image.DATAURLS["line"], //"ville/theme/clean/decoration/slider/line.png",
+        backgroundRepeatInline: 'repeat',
+        backgroundPositionXInline: "center",
+        backgroundPositionYInline: "center"
       }
     },
 
@@ -1331,7 +1339,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
       include : "inset-line",
       style :
       {
-        backgroundImage: "ville/theme/clean/decoration/slider/line-selected.png"
+        backgroundImageInline: ville.theme.clean.Image.DATAURLS["line-selected"] //"ville/theme/clean/decoration/slider/line-selected.png"
       }
     },
     
@@ -1359,7 +1367,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
       include : "inset-line",
       style :
       {
-        backgroundImage: "ville/theme/clean/decoration/slider/line-invalid.png"
+        backgroundImageInline: ville.theme.clean.Image.DATAURLS["line-invalid"] //"ville/theme/clean/decoration/slider/line-invalid.png"
       }
     },
     

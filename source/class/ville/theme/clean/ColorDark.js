@@ -78,7 +78,7 @@ qx.Theme.define("ville.theme.clean.ColorDark",
     
     //SQ New
     //"textfield-selected" : [133, 183, 217], //#85b7d9
-    "textfield-selected" : "#77a4c3",
+    "textfield-selected" : "#1E90FF",//"DodgerBlue",//"#77a4c3",
 	  "textfield-selected-darker" : "rgba(0, 0, 0, 0.5)",
 	
     //SQ New
@@ -95,6 +95,8 @@ qx.Theme.define("ville.theme.clean.ColorDark",
     // window
     "window-border" : "rgb(102, 102, 102)",//"#2E3A46",
     "window-border-inner" : "rgb(102, 102, 102)",//"white",
+    "window-minimize-button" : "gray",
+    "window-minimize-button-hovered" : "white",
 
     // group box
     "white-box-border" : "rgb(102, 102, 102)",//"#D8D8D8",
