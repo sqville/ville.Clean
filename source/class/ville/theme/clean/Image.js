@@ -20,8 +20,8 @@
  * Mapping class for all images used in the clean theme.
  *
  * @asset(qx/static/blank.png)
- * @asset(decoration/arrows/*)
- * @asset(decoration/table/*)
+ * @asset(decoration/table/boolean-true.png)
+ * @asset(decoration/table/boolean-false.png)
  * @asset(decoration/colorselector/*)
  * @asset(decoration/treevirtual/*)
  */
@@ -39,18 +39,6 @@ qx.Class.define("ville.theme.clean.Image",
     {
       "blank" : "qx/static/blank.png",
 
-      // arrows - Retained for theme switching since names are created dynamically
-      "arrow-right" : "decoration/arrows/right.gif",
-      "arrow-left" : "decoration/arrows/left.gif",
-      "arrow-up" : "decoration/arrows/up.gif",
-      "arrow-down" : "decoration/arrows/down.gif",
-      "arrow-down-small" : "decoration/arrows/down-small.gif",
-      "arrow-up-small" : "decoration/arrows/up-small.gif",
-
-      // table - Retained for theme switching since names are created dynamically
-      "table-ascending" : "decoration/table/ascending.png",
-      "table-descending" : "decoration/table/descending.png",
-
 	    // tree virtual - Leaving as-is
 	    "tree-minus" : "decoration/treevirtual/minus.gif",
       "tree-plus" : "decoration/treevirtual/plus.gif",
@@ -64,16 +52,12 @@ qx.Class.define("ville.theme.clean.Image",
       "treevirtual-minus-cross" : "decoration/treevirtual/cross_minus.gif",
       "treevirtual-plus-cross" : "decoration/treevirtual/cross_plus.gif",
       "treevirtual-end" : "decoration/treevirtual/end.gif",
-      "treevirtual-cross" : "decoration/treevirtual/cross.gif",
-
-      // menu - Retained for theme switching since names are created dynamically
-      "menu-checkbox" : "decoration/menu/checkbox.gif",
-      "menu-radiobutton" : "decoration/menu/radiobutton.gif"
+      "treevirtual-cross" : "decoration/treevirtual/cross.gif"
     },
 
     DATAURLS :
     {
-      // checkbox
+      // checkbox 
       "checkbox-checked" : 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="15" width="15" viewBox="0 0 15 15"><path fill="DodgerBlue" d="M14.05 3.49c.28.3.27.77-.04 1.06l-7.93 7.47A.85.85 0 0 1 4.9 12L2.22 9.28a.75.75 0 1 1 1.06-1.06l2.24 2.27 7.47-7.04a.75.75 0 0 1 1.06.04Z"></path></svg>',
       "checkbox-checked-disabled" : 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="DarkGray" height="16" viewBox="0 0 24 24" width="16"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>',
 

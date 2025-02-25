@@ -66,6 +66,7 @@ qx.Mixin.define("ville.theme.clean.MImage",
     _applyClipPath(value, old) {
       var elem = this.getContentElement();
       elem.setStyle("clip-path", value);
+      elem.setStyle("aspect-ratio", 1);
     }
   }
   

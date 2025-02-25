@@ -22,13 +22,18 @@
  * The Clean appearance theme.
  * @asset(qx/icon/${qx.icontheme}/22/apps/office-calendar.png)
  * @require(qx.ui.basic.Image)
+ * @require(qx.ui.form.Button)
+ * @require(qx.ui.table.headerrenderer.HeaderCell)
  * @require(ville.theme.clean.MImage)
- * 
+ * @require(ville.theme.clean.MButton)
+ * @require(ville.theme.clean.MHeaderCell)
  */
 qx.Theme.define("ville.theme.clean.Appearance",
 {    
   boot : function() {
     qx.Class.include(qx.ui.basic.Image, ville.theme.clean.MImage);
+    qx.Class.include(qx.ui.form.Button, ville.theme.clean.MButton);
+    qx.Class.include(qx.ui.table.headerrenderer.HeaderCell, ville.theme.clean.MHeaderCell);
   },
   
   appearances :
@@ -94,7 +99,6 @@ qx.Theme.define("ville.theme.clean.Appearance",
 
       style : function(states)
       {
-        //console.log(this.sqtest);
         return {
           backgroundColor : "tooltip",
           textColor : "tooltip-text",
@@ -216,8 +220,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
       {
         return {
           //icon : ville.theme.clean.Image.URLS["arrow-" + (states.vertical ? "down" : "right")],
-          //icon : "",
-          icon : states.vertical ? ville.theme.clean.Image.URLS["arrow-down"] : "",
+          icon : "",
+          iconProps : {decorator : states.vertical ? "ville-icon-arrow-down" : "ville-icon-arrow-right"},
           padding : [10, 12] 
         };
       }
@@ -230,9 +234,9 @@ qx.Theme.define("ville.theme.clean.Appearance",
       style : function(states)
       {  
         return {
-          decorator : states.vertical ? "ville-icon-arrow-down" : "ville-icon-arrow-right",
-          width : 0,
-          height : 0,
+          //decorator : states.vertical ? "ville-icon-arrow-down" : "ville-icon-arrow-right",
+          //width : 10,
+          //height : 10,
           opacity : !states.replacement && states.disabled ? 0.3 : undefined
         };
       }
@@ -247,8 +251,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
       {
         return {
           //icon : ville.theme.clean.Image.URLS["arrow-" + (states.vertical ? "up" : "left")],
-          //icon : "",
-          icon : states.vertical ? ville.theme.clean.Image.URLS["arrow-up"] : "",
+          icon : "",
+          iconProps : {decorator : states.vertical ? "ville-icon-arrow-up" : "ville-icon-arrow-left"},
           padding : [10, 12] 
         };
       }
@@ -261,9 +265,10 @@ qx.Theme.define("ville.theme.clean.Appearance",
       style : function(states)
       {
         return {
-          decorator : "ville-icon-arrow-left",
-          width : 0,
-          height : 0  
+          //decorator : "ville-icon-arrow-left",
+          //width : 0,
+          //height : 0,
+          opacity : !states.replacement && states.disabled ? 0.3 : undefined
         };
       }
     },
@@ -393,6 +398,15 @@ qx.Theme.define("ville.theme.clean.Appearance",
 
       style : function(states)
       {
+        var sorticondec = {decorator : "no-border"};
+        if (states.sorted) {
+          if (states.sortedAscending) {
+            sorticondec = {decorator : "ville-icon-arrow-up"};
+          } else {
+            sorticondec = {decorator : "ville-icon-arrow-down"};
+          }
+        }
+        
         return {
           decorator : states.first ? "table-header-cell-first" : "table-header-cell",
           minWidth: 13,
@@ -400,10 +414,12 @@ qx.Theme.define("ville.theme.clean.Appearance",
           alignY : "middle",
           padding : [14, 10],
           cursor : states.disabled ? undefined : "pointer",
-          sortIcon : states.sorted ?
+          sortIconProps : sorticondec
+          //sortIconProps : {states.sorted ? () : undefined}
+          /*sortIcon : states.sorted ?
               (ville.theme.clean.Image.URLS["" +
                  (states.sortedAscending ? "arrow-up" : "arrow-down")
-              ]) : undefined
+              ]) : undefined*/
         };
       }
     },
@@ -419,10 +435,10 @@ qx.Theme.define("ville.theme.clean.Appearance",
       }
     },
 
-    "table-header-cell/sort-icon" : "image",
-
     "table-header-cell/sort-icon" :
     {
+      include : "image",
+      
       style : function(states)
       {
        return {
@@ -1218,10 +1234,10 @@ qx.Theme.define("ville.theme.clean.Appearance",
 
         var icon = "";
         if (states.left) {
-          icon = "left";
+          icon = "left-small";
           styles.marginRight = 2;
         } else if (states.right) {
-          icon += "right";
+          icon += "right-small";
           styles.marginLeft = 2;
         } else if (states.up) {
           icon += "up-small";
@@ -1233,7 +1249,9 @@ qx.Theme.define("ville.theme.clean.Appearance",
           styles.marginTop = 2;
         }
 
-        styles.icon = ville.theme.clean.Image.URLS["arrow-" + icon];
+        //styles.icon = ville.theme.clean.Image.URLS["arrow-" + icon];
+        styles.icon = "",
+        styles.iconProps = {decorator : "ville-icon-arrow-" + icon},
         styles.cursor = "pointer";
         styles.decorator = "button-box";
         return styles;

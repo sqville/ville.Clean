@@ -38,6 +38,13 @@ qx.Theme.define("ville.theme.clean.Decoration",
     ---------------------------------------------------------------------------
     */
 
+    "no-border" :
+    {
+      style : {
+        width: 0
+      }
+    },
+
     "border-blue" :
     {
       style :
