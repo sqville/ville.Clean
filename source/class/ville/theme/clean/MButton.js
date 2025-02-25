@@ -21,7 +21,18 @@ qx.Mixin.define("ville.theme.clean.MButton",
           check : "Map",
           nullable : true,
           themeable : true,
-          apply : "_applyIconProps"
+          apply : "_applyIconProps",
+          event: "changeIconProps"
+        },
+
+        iconDec :
+        {
+          nullable: true,
+          init: null,
+          apply: "_applyIconDec",
+          event: "changeIconDec",
+          check: "Decorator",
+          themeable: true
         }
           
       },
@@ -38,6 +49,14 @@ qx.Mixin.define("ville.theme.clean.MButton",
         _applyIconProps (value, old) 
         {
           this.getChildControl("icon").set(value);
+        },
+
+        // property apply
+        _applyIconDec(value, old) {
+          var icon = this.getChildControl("icon", true);
+          if (icon) {
+            icon.setDecorator(value);
+          }
         }
       }
     });

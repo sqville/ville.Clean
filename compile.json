@@ -13,8 +13,9 @@
          "name": "widgetbrowser",
          "title": "WidgetBrowser",
          "include": [
-            "ville.theme.CleanDark",
             "qx.theme.Simple",
+            "ville.theme.CleanDark",
+            "ville.theme.clean.Image",
             "qx.theme.Classic",
             "widgetbrowser.pages.Tree",
             "widgetbrowser.pages.List",

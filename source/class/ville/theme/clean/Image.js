@@ -22,6 +22,7 @@
  * @asset(qx/static/blank.png)
  * @asset(decoration/table/boolean-true.png)
  * @asset(decoration/table/boolean-false.png)
+ * @asset(decoration/menu/*)
  * @asset(decoration/colorselector/*)
  * @asset(decoration/treevirtual/*)
  */

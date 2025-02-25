@@ -21,6 +21,12 @@
 /**
  * The Clean appearance theme.
  * @asset(qx/icon/${qx.icontheme}/22/apps/office-calendar.png)
+ * @asset(qx/static/blank.png)
+ * @asset(decoration/table/boolean-true.png)
+ * @asset(decoration/table/boolean-false.png)
+ * @asset(decoration/menu/*)
+ * @asset(decoration/colorselector/*)
+ * @asset(decoration/treevirtual/*)
  * @require(qx.ui.basic.Image)
  * @require(qx.ui.form.Button)
  * @require(qx.ui.table.headerrenderer.HeaderCell)
@@ -221,7 +227,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
         return {
           //icon : ville.theme.clean.Image.URLS["arrow-" + (states.vertical ? "down" : "right")],
           icon : "",
-          iconProps : {decorator : states.vertical ? "ville-icon-arrow-down" : "ville-icon-arrow-right"},
+          iconDec : states.vertical ? "ville-icon-arrow-down" : "ville-icon-arrow-right",
           padding : [10, 12] 
         };
       }
@@ -235,8 +241,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
       {  
         return {
           //decorator : states.vertical ? "ville-icon-arrow-down" : "ville-icon-arrow-right",
-          //width : 10,
-          //height : 10,
+          width : 6,
+          height : 6,
           opacity : !states.replacement && states.disabled ? 0.3 : undefined
         };
       }
@@ -252,7 +258,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
         return {
           //icon : ville.theme.clean.Image.URLS["arrow-" + (states.vertical ? "up" : "left")],
           icon : "",
-          iconProps : {decorator : states.vertical ? "ville-icon-arrow-up" : "ville-icon-arrow-left"},
+          iconDec : states.vertical ? "ville-icon-arrow-up" : "ville-icon-arrow-left",
           padding : [10, 12] 
         };
       }
@@ -266,8 +272,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
       {
         return {
           //decorator : "ville-icon-arrow-left",
-          //width : 0,
-          //height : 0,
+          width : 6,
+          height : 6,
           opacity : !states.replacement && states.disabled ? 0.3 : undefined
         };
       }
@@ -398,12 +404,12 @@ qx.Theme.define("ville.theme.clean.Appearance",
 
       style : function(states)
       {
-        var sorticondec = {decorator : "no-border"};
+        var sorticondec = "no-border";
         if (states.sorted) {
           if (states.sortedAscending) {
-            sorticondec = {decorator : "ville-icon-arrow-up"};
+            sorticondec = "ville-icon-arrow-up";
           } else {
-            sorticondec = {decorator : "ville-icon-arrow-down"};
+            sorticondec = "ville-icon-arrow-down";
           }
         }
         
@@ -414,7 +420,8 @@ qx.Theme.define("ville.theme.clean.Appearance",
           alignY : "middle",
           padding : [14, 10],
           cursor : states.disabled ? undefined : "pointer",
-          sortIconProps : sorticondec
+          sortIcon : ville.theme.clean.Image.URLS["blank"],
+          sortIconDec : sorticondec
           //sortIconProps : {states.sorted ? () : undefined}
           /*sortIcon : states.sorted ?
               (ville.theme.clean.Image.URLS["" +
@@ -1251,7 +1258,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
 
         //styles.icon = ville.theme.clean.Image.URLS["arrow-" + icon];
         styles.icon = "",
-        styles.iconProps = {decorator : "ville-icon-arrow-" + icon},
+        styles.iconDec = "ville-icon-arrow-" + icon,
         styles.cursor = "pointer";
         styles.decorator = "button-box";
         return styles;
@@ -2346,22 +2353,6 @@ qx.Theme.define("ville.theme.clean.Appearance",
       include : "image",
       style : function(states)
       {
-        /*
-        var decorator = "ville-icon-tree-folder";
-        var sheet = qx.ui.style.Stylesheet.getInstance();
-        var prefix = qx.theme.manager.Decoration.CSS_CLASSNAME_PREFIX;
-        var prefixdecbase = "." + prefix + decorator; 
-        //sheet.addRule(":root", "--compoundbrandbackground:" + qx.theme.manager.Color.getInstance().resolve("CompoundBrandBackground"));
-        if (!sheet.hasRule(prefixdecbase))
-        {
-          var rule1 = prefixdecbase;
-          var css1 = 'clip-path: path("M 1 4.5 A 2.5 2.5 0 0 1 3.5 2 h 2.09 c 0.4 0 0.78 0.16 1.06 0.44 L 8 3.79 L 5.94 5.85 a 0.5 0.5 0 0 1 -0.35 0.15 H 1 V 4.5 Z M 1 7 v 4.5 A 2.5 2.5 0 0 0 3.5 14 h 9 a 2.5 2.5 0 0 0 2.5 -2.5 v -5 A 2.5 2.5 0 0 0 12.5 4 H 9.2 L 6.66 6.56 A 1.5 1.5 0 0 1 5.59 7 H 1 Z")';
-          sheet.addRule(rule1, css1);
-
-          rule1 = prefixdecbase + "-opened";
-          css1 = 'clip-path: path("M 1 4.5 v 4.97 l 1 -1.72 A 3.5 3.5 0 0 1 5.01 6 h 7.93 a 2.5 2.5 0 0 0 -2.45 -2 H 7.2 L 5.66 2.44 A 1.5 1.5 0 0 0 4.59 2 H 3.5 A 2.5 2.5 0 0 0 1 4.5 Z M 5.02 7 H 13 a 2 2 0 0 1 1.73 3 l -1.59 2.75 A 2.5 2.5 0 0 1 10.98 14 H 3 a 2 2 0 0 1 -1.73 -3 l 1.59 -2.75 A 2.5 2.5 0 0 1 5.02 7 Z")';
-          sheet.addRule(rule1, css1);
-        }*/
         var decorator = "ville-icon-tree-folder";
         var clippath = ville.theme.clean.Image.CLIPPATHS["tree-folder"];
 
@@ -2413,18 +2404,6 @@ qx.Theme.define("ville.theme.clean.Appearance",
       include : "image",
       style : function(states)
       {
-        
-        /*var decorator = "ville-icon-tree-file";
-        var sheet = qx.ui.style.Stylesheet.getInstance();
-        var prefix = qx.theme.manager.Decoration.CSS_CLASSNAME_PREFIX;
-        var prefixdecbase = "." + prefix + decorator; 
-        //sheet.addRule(":root", "--compoundbrandbackground:" + qx.theme.manager.Color.getInstance().resolve("CompoundBrandBackground"));
-        if (!sheet.hasRule(prefixdecbase))
-        {
-          var rule1 = prefixdecbase;
-          var css1 = 'clip-path: path("M 9.59 5 a 0.5 0.5 0 0 0 -0.09 -1 H 6.41 a 0.5 0.5 0 0 0 0.09 1 h 3.09 Z M 10 8 a 0.5 0.5 0 0 1 -0.41 0.5 H 6.5 a 0.5 0.5 0 0 1 -0.09 -1 H 9.5 c 0.28 0 0.5 0.22 0.5 0.5 Z m -0.41 3.98 A 0.5 0.5 0 0 0 9.5 11 h -3 l -0.09 0.01 a 0.5 0.5 0 0 0 0.09 1 h 3 l 0.09 -0.02 Z M 3 3 c 0 -1.1 0.9 -2 2 -2 h 6 a 2 2 0 0 1 2 2 v 10 a 2 2 0 0 1 -2 2 H 5 a 2 2 0 0 1 -2 -2 V 3 Z m 8 -1 H 5 a 1 1 0 0 0 -1 1 v 10 a 1 1 0 0 0 1 1 h 6 a 1 1 0 0 0 1 -1 V 3 a 1 1 0 0 0 -1 -1 Z M 9.59 5 a 0.5 0.5 0 0 0 -0.09 -1 H 6.41 a 0.5 0.5 0 0 0 0.09 1 h 3.09 Z M 10 8 a 0.5 0.5 0 0 1 -0.41 0.5 H 6.5 a 0.5 0.5 0 0 1 -0.09 -1 H 9.5 c 0.28 0 0.5 0.22 0.5 0.5 Z m -0.41 3.98 A 0.5 0.5 0 0 0 9.5 11 h -3 l -0.09 0.01 a 0.5 0.5 0 0 0 0.09 1 h 3 l 0.09 -0.02 Z")';
-          sheet.addRule(rule1, css1);
-        }*/
         
         return {
           //padding : [0, 4, 0, 0],

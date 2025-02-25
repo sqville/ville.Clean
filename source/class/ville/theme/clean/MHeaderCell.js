@@ -22,6 +22,16 @@ qx.Mixin.define("ville.theme.clean.MHeaderCell",
           nullable : true,
           themeable : true,
           apply : "_applySortIconProps"
+        },
+
+        sortIconDec :
+        {
+          nullable: true,
+          init: null,
+          apply: "_applySortIconDec",
+          event: "changeSortIconDec",
+          check: "Decorator",
+          themeable: true
         }
           
       },
@@ -38,6 +48,14 @@ qx.Mixin.define("ville.theme.clean.MHeaderCell",
         _applySortIconProps (value, old) 
         {
           this.getChildControl("sort-icon").set(value);
+        },
+
+        // property apply
+        _applySortIconDec(value, old) {
+          var icon = this.getChildControl("sort-icon", true);
+          if (icon) {
+            icon.setDecorator(value);
+          }
         }
       }
     });

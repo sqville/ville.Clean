@@ -59,7 +59,7 @@ qx.Class.define("widgetbrowser.pages.Table",
       var widgets = this._widgets = new qx.type.Array();
 
       var table = this.__createTable();
-      table.setFocusedCell(2,5);
+      //table.setFocusedCell(2,5);
       widgets.push(table);
       this.add(table);
     },
