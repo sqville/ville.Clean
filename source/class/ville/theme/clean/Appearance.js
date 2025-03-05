@@ -21,18 +21,17 @@
 /**
  * The Clean appearance theme.
  * @asset(qx/icon/${qx.icontheme}/22/apps/office-calendar.png)
- * @asset(qx/static/blank.png)
  * @asset(decoration/table/boolean-true.png)
  * @asset(decoration/table/boolean-false.png)
- * @asset(decoration/menu/*)
  * @asset(decoration/colorselector/*)
- * @asset(decoration/treevirtual/*)
  * @require(qx.ui.basic.Image)
  * @require(qx.ui.form.Button)
  * @require(qx.ui.table.headerrenderer.HeaderCell)
  * @require(ville.theme.clean.MImage)
  * @require(ville.theme.clean.MButton)
  * @require(ville.theme.clean.MHeaderCell)
+ * @require(qx.ui.tree.core.AbstractItem)
+ * @require(ville.theme.clean.MTreeItem)
  */
 qx.Theme.define("ville.theme.clean.Appearance",
 {    
@@ -40,6 +39,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
     qx.Class.include(qx.ui.basic.Image, ville.theme.clean.MImage);
     qx.Class.include(qx.ui.form.Button, ville.theme.clean.MButton);
     qx.Class.include(qx.ui.table.headerrenderer.HeaderCell, ville.theme.clean.MHeaderCell);
+    qx.Class.include(qx.ui.tree.core.AbstractItem, ville.theme.clean.MTreeItem);
   },
   
   appearances :
@@ -2330,19 +2330,20 @@ qx.Theme.define("ville.theme.clean.Appearance",
       style : function(states)
       {
         var backgroundColor;
+        var iconColor = "text";
         if (states.selected) {
           backgroundColor = "combobox-item-selected";
+          iconColor = "textfield-selected";
           if (states.disabled) {
             backgroundColor = "background-selected-disabled";
           }
         }
         return {
           padding : [3, 8, 3, 5],
-          //icon : states.opened ? ville.theme.clean.Image.URLS["tree-folder-open"] : ville.theme.clean.Image.URLS["tree-folder"],
           icon : "",
-          //iconOpened : ville.theme.clean.Image.URLS["tree-folder-open"],
           iconOpened : "",
           backgroundColor : backgroundColor,
+          iconColor : iconColor,
           opacity : states.drag ? 0.5 : undefined
         };
       }
@@ -2366,7 +2367,7 @@ qx.Theme.define("ville.theme.clean.Appearance",
           width : 15,
           height : 15,
           backgroundColor : "text",
-          decorator : decorator,
+          //decorator : decorator,
           clipPath : clippath
         };
       }
@@ -2392,7 +2393,6 @@ qx.Theme.define("ville.theme.clean.Appearance",
       style : function(states)
       {
         return {
-          //icon : ville.theme.clean.Image.URLS["tree-file"],
           icon : "",
           opacity : states.drag ? 0.5 : undefined
         };
@@ -2406,14 +2406,11 @@ qx.Theme.define("ville.theme.clean.Appearance",
       {
         
         return {
-          //padding : [0, 4, 0, 0],
-          //width : 18,
           width : 15,
           height : 15,
           backgroundColor : "text",
-          decorator : "ville-icon-tree-file",
+          //decorator : "ville-icon-tree-file",
           clipPath : ville.theme.clean.Image.CLIPPATHS["tree-file"]
-          //scale : true
         };
       }
     },  
