@@ -5,9 +5,9 @@
 
 ## Benefits
 
-* Now includes light (Clean) and dark (CleanDark) themes (starting from v2)
+* Includes light (Clean) and dark (CleanDark) themes (starting from v2)
 * Reduced reliance on external images for basic control graphics such as arrows, radio buttons and window buttons, and tree icons (done with qooxdoo appearance and decoration entries)
-* Leverages SVG files for decoration images where possible to improve image sharpness
+* Leverages SVG files for decoration images to improve image sharpness
 
 <!-- DEMOS -->
 ## Demo
