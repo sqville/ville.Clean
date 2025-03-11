@@ -140,27 +140,7 @@ qx.Theme.define("ville.theme.clean.Decoration",
         width : [0,4.5,4,4.5]
       }
    },
-   
-   "ville-icon-arrow-up-med-gray" :
-   {
-   	  include : "ville-icon-arrow-up",
-   	  
-   	  style :
-      {
-        color : [null,"transparent","ville-arrow-med-gray","transparent"]
-      }
-   },
-   
-   "ville-icon-arrow-up-invert" :
-   {
-   	  include : "ville-icon-arrow-up",
-   	  
-   	  style :
-      {
-        color : [null,"transparent","ville-icon-base","transparent"]
-      }
-   },
-   
+      
    "ville-icon-arrow-up-small" :
    {
    	  style :
@@ -181,26 +161,6 @@ qx.Theme.define("ville.theme.clean.Decoration",
       }
    },
    
-   "ville-icon-arrow-down-med-gray" :
-   {
-   	  include : "ville-icon-arrow-down",
-   	  
-   	  style :
-      {
-        color : ["ville-arrow-med-gray","transparent",null,"transparent"]
-      }
-   },
-   
-   "ville-icon-arrow-down-invert" :
-   {
-   	  include : "ville-icon-arrow-down",
-   	  
-   	  style :
-      {
-        color : ["ville-icon-base","transparent",null,"transparent"]
-      }
-   },
-   
    "ville-icon-arrow-down-small" :
    {
    	  style :
@@ -218,16 +178,6 @@ qx.Theme.define("ville.theme.clean.Decoration",
         color : ["transparent",null,"transparent","ville-arrow-gray"],
         style : ["solid",null,"solid","solid"],
         width : [4.5,0,4.5,4]
-      }
-   },
-   
-   "ville-icon-arrow-right-invert" :
-   {
-   	  include : "ville-icon-arrow-right",
-   	  
-   	  style :
-      {
-        color : ["transparent",null,"transparent","ville-icon-base"]
       }
    },
    
@@ -1490,7 +1440,6 @@ qx.Theme.define("ville.theme.clean.Decoration",
     {
       style :
       {
-        //widthLeft : 1,
         colorLeft : "button-border"
       }
     },
@@ -1635,7 +1584,6 @@ qx.Theme.define("ville.theme.clean.Decoration",
         width : [1, 1, 0, 1],
         backgroundColor: "background",
         color : "white-box-border",
-        //color : ["white-box-border", "white-box-border", "white", "white-box-border"],
         radius : [3, 3, 0, 0]
       }
     },
@@ -1647,7 +1595,6 @@ qx.Theme.define("ville.theme.clean.Decoration",
       {
         radius : [0, 0, 3, 3],
         width : [0, 1, 1, 1]
-        //color : ["white", "white-box-border", "white-box-border", "white-box-border"]
       }
     },
 
@@ -1658,7 +1605,6 @@ qx.Theme.define("ville.theme.clean.Decoration",
       {
         radius : [3, 0, 0, 3],
         width : [1, 0, 1, 1]
-        //color : ["white-box-border", "white", "white-box-border", "white-box-border"]
       }
     },
 
@@ -1687,7 +1633,6 @@ qx.Theme.define("ville.theme.clean.Decoration",
       {
         width : [0, 0, 3, 0],
         backgroundColor: "background",
-        //color : "white-box-border"
         color : "tabviewspacebar-bar-selected"
       }
     },
@@ -2052,8 +1997,6 @@ qx.Theme.define("ville.theme.clean.Decoration",
     	style :
     	{
         innerWidth : 0
-        //innerColor : "textfield-selected",
-        //color : "text"
     	}
     },
 

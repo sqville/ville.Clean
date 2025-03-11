@@ -1248,15 +1248,12 @@ qx.Theme.define("ville.theme.clean.Appearance",
           styles.marginLeft = 2;
         } else if (states.up) {
           icon += "up-small";
-          //icon += "up";
           styles.marginBottom = 2;
         } else {
           icon += "down-small";
-          //icon += "down";
           styles.marginTop = 2;
         }
-
-        //styles.icon = ville.theme.clean.Image.URLS["arrow-" + icon];
+        
         styles.icon = "",
         styles.iconDec = "ville-icon-arrow-" + icon,
         styles.cursor = "pointer";
@@ -1269,6 +1266,14 @@ qx.Theme.define("ville.theme.clean.Appearance",
 
     "scrollbar/button-end" : "scrollbar/button",
 
+    "scrollbar/button/icon" : {
+      style : function() {
+        return {
+          width : 4,
+          height : 4
+        };
+      }
+    },
 
     /*
     ---------------------------------------------------------------------------
