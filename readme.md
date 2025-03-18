@@ -12,7 +12,7 @@
 <!-- DEMOS -->
 ## Demo
 
-Using Qooxdoos [WidgetBrowser](https://sqville.github.io/ville.Clean/published/)
+Using Qooxdoos [WidgetBrowser](https://qooxdoo.org/qxl.packagebrowser/#sqville~ville.Clean~Demos~WidgetBrowser)
 
 <!-- GETTING STARTED -->
 ## Using the Theme in your Application
